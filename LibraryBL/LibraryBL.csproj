@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookBL.cs" />
     <Compile Include="RegisterBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

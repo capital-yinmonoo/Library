@@ -23,6 +23,11 @@ namespace Library.Controllers
             return View();
         }
 
+        public ActionResult Register_Entry()
+        {
+            return View();
+        }
+
         [HttpGet]
         public string GetMemberList()
         {

@@ -238,7 +238,6 @@ C:\Library\Library\Library\bin\LibraryDL.dll
 C:\Library\Library\Library\bin\CommonFunction.pdb
 C:\Library\Library\Library\bin\LibraryBL.pdb
 C:\Library\Library\Library\bin\EntityFramework.xml
-C:\Library\Library\Library\bin\EntityFramework.SqlServer.xml
 C:\Library\Library\Library\bin\Newtonsoft.Json.xml
 C:\Library\Library\Library\bin\System.Web.Helpers.xml
 C:\Library\Library\Library\bin\System.Web.Mvc.xml

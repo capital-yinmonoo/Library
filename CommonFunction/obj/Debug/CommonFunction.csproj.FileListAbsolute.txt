@@ -1,0 +1,9 @@
+E:\Yin Mon Oo\Library\CommonFunction\bin\Debug\CommonFunction.dll
+E:\Yin Mon Oo\Library\CommonFunction\bin\Debug\CommonFunction.pdb
+E:\Yin Mon Oo\Library\CommonFunction\bin\Debug\Newtonsoft.Json.dll
+E:\Yin Mon Oo\Library\CommonFunction\bin\Debug\Newtonsoft.Json.xml
+E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.csprojAssemblyReference.cache
+E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CoreCompileInputs.cache
+E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CopyComplete
+E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.dll
+E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.pdb

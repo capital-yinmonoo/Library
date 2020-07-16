@@ -1,0 +1,167 @@
+.input-numeral1, .input-numeral2, .input-numeral3,
+.input-numeral4, .input-numeral5, .input-numeral6,
+.input-numeral7, .input-numeral8, .input-numeral9,
+.input-numeral10, .input-numeral11, .input-numeral12,
+.input-numeral13, .input-numeral14, .input-numeral15 {
+    text-align: right;
+}
+
+.select2-container {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    /*border: 1px solid #ced4da;*/
+    border-bottom-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 0 solid #fff !important;
+}
+
+#radioBtn .notActive {
+    color: #17a2b8;
+    background-color: #fff;
+}
+
+.text-custom1{
+    color:chocolate;
+}
+
+.border-left-custom1 {
+    border-left: .25rem solid chocolate !important;
+}
+
+
+.text-custom2 {
+    color: darkorchid;
+}
+
+.border-left-custom2 {
+    border-left: .25rem solid darkorchid !important;
+}
+
+
+.hrtable thead th {
+    color: black;
+    background: cornsilk;
+}
+.hrtable tr:nth-child(even){
+background:azure;
+}
+
+.hrtable tr{
+color:black;
+}
+
+td.details-control {
+    background: url('../Images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('../Images/details_close.png') no-repeat center center;
+}
+
+.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 179, 215);
+    border-color: rgb(38, 154, 188);
+}
+
+.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 173, 78);
+    border-color: rgb(238, 162, 54);
+}
+
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 83, 79);
+    border-color: rgb(212, 63, 58);
+}
+
+.ms-options-wrap, .ms-options-wrap * {
+    box-sizing: border-box;
+}
+
+.ms-options-wrap > .ms-options{
+    position:inherit!important;
+}
+
+.ms-options-wrap > button:focus, .ms-options-wrap > button {
+    height: 35px !important;
+    text-align: center !important;
+    margin-top: 0px !important;
+    font-size: 1rem !important;
+    color: black !important;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+
+.ms-options-wrap{
+    position:inherit;
+    width:1000px;
+}
+.ms-options-wrap > .ms-options > ul label {
+    color:darkblue;
+    font-weight:bold;
+    background: #007bff33;
+}
+
+.ms-options-wrap > .ms-options > ul li.selected label {
+    background-color: #efefef;
+    border-color: transparent;
+    color:red;
+}
+
+.ms-options-wrap > .ms-options > .ms-search input {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.ms-options-wrap > .ms-options > .ms-selectall.global {
+    color: blue;
+    font-weight: bold;
+    font-size:large;
+}
+
+.btncategory {
+    height: 150px;
+    font-size: x-large;
+    border: none;
+    color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}

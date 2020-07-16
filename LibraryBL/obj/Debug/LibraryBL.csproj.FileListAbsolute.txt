@@ -1,0 +1,9 @@
+E:\Yin Mon Oo\Library\LibraryBL\bin\Debug\LibraryBL.dll
+E:\Yin Mon Oo\Library\LibraryBL\bin\Debug\LibraryBL.pdb
+E:\Yin Mon Oo\Library\LibraryBL\bin\Debug\LibraryDL.dll
+E:\Yin Mon Oo\Library\LibraryBL\bin\Debug\LibraryDL.pdb
+E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.csprojAssemblyReference.cache
+E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCompileInputs.cache
+E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
+E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.dll
+E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.pdb

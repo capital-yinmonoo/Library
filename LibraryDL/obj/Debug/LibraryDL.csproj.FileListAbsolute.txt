@@ -1,0 +1,5 @@
+E:\Yin Mon Oo\Library\LibraryDL\bin\Debug\LibraryDL.dll
+E:\Yin Mon Oo\Library\LibraryDL\bin\Debug\LibraryDL.pdb
+E:\Yin Mon Oo\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
+E:\Yin Mon Oo\Library\LibraryDL\obj\Debug\LibraryDL.dll
+E:\Yin Mon Oo\Library\LibraryDL\obj\Debug\LibraryDL.pdb

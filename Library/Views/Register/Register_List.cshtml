@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Register_List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid" id="content_zip">
+
+    <div class="row">
+        <div class="col-xl-12 col-md-12 mb-2">
+            <div class="card border-left-custom2 shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="tbmember" class="hrtable col-sm-12 col-md-12">
+                            <thead>
+                                <tr>
+                                    <th>MemberID:</th>
+                                    <th>MemberName:</th>
+                                    <th>ContactNo:</th>
+                                    <th>Address:</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var table = $('#tbmember').DataTable(
+                {
+                    "language": {
+                        "info": "Display _START_ to _END_ of _TOTAL_ records",
+                    },
+                    "oLanguage": {
+                        "sLengthMenu": "Display _MENU_ records",
+                    },
+                    "ajax": {
+                        "url": "../Register/GetMemberList",
+                        "type": "GET",
+                        "datatype": "json",
+                        "dataSrc": ""
+                    },
+                    "columns": [
+                        { "data": "MemberID", orderable: false, "width": "13%" },
+                        { "data": "MemberName", orderable: false, "width": "13%" },
+                         { "data": "ContactNo", orderable: false, "width": "13%" },
+                          { "data": "Address", orderable: false, "width": "13%" }
+                    ],
+                }
+            );
+        });
+
+        </script>
+
+}
+
+
+

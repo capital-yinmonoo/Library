@@ -7,3 +7,12 @@ E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCompileInputs.cac
 E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
 E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.dll
 E:\Yin Mon Oo\Library\LibraryBL\obj\Debug\LibraryBL.pdb
+C:\My Data\Projects\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll
+C:\My Data\Projects\Library\Library\LibraryBL\bin\Debug\LibraryBL.pdb
+C:\My Data\Projects\Library\Library\LibraryBL\bin\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\LibraryBL\bin\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.csprojAssemblyReference.cache
+C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCompileInputs.cache
+C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
+C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.dll
+C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.pdb

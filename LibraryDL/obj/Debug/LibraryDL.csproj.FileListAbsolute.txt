@@ -3,3 +3,9 @@ E:\Yin Mon Oo\Library\LibraryDL\bin\Debug\LibraryDL.pdb
 E:\Yin Mon Oo\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
 E:\Yin Mon Oo\Library\LibraryDL\obj\Debug\LibraryDL.dll
 E:\Yin Mon Oo\Library\LibraryDL\obj\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\LibraryDL\bin\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssemblyReference.cache
+C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
+C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb

@@ -7,3 +7,12 @@ E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CoreCompile
 E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CopyComplete
 E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.dll
 E:\Yin Mon Oo\Library\CommonFunction\obj\Debug\CommonFunction.pdb
+C:\My Data\Projects\Library\Library\CommonFunction\bin\Debug\CommonFunction.dll
+C:\My Data\Projects\Library\Library\CommonFunction\bin\Debug\CommonFunction.pdb
+C:\My Data\Projects\Library\Library\CommonFunction\bin\Debug\Newtonsoft.Json.dll
+C:\My Data\Projects\Library\Library\CommonFunction\bin\Debug\Newtonsoft.Json.xml
+C:\My Data\Projects\Library\Library\CommonFunction\obj\Debug\CommonFunction.csprojAssemblyReference.cache
+C:\My Data\Projects\Library\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CoreCompileInputs.cache
+C:\My Data\Projects\Library\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CopyComplete
+C:\My Data\Projects\Library\Library\CommonFunction\obj\Debug\CommonFunction.dll
+C:\My Data\Projects\Library\Library\CommonFunction\obj\Debug\CommonFunction.pdb

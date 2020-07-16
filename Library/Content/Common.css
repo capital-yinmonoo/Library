@@ -48,8 +48,8 @@
     color: black;
     background: cornsilk;
 }
-.hrtable tr:nth-child(even){
-background:azure;
+.hrtable tr:nth-child(even) {
+    background: #FFDFBB;
 }
 
 .hrtable tr{

@@ -16,5 +16,10 @@ namespace CommonFunction
             JSONString = JsonConvert.SerializeObject(table);
             return JSONString;
         }
+
+        public string DataTableToJSONWithJSONNet(object p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

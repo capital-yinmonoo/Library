@@ -9,3 +9,9 @@ C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssembly
 C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
 C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
 C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb
+C:\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll
+C:\Library\Library\LibraryDL\bin\Debug\LibraryDL.pdb
+C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssemblyReference.cache
+C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
+C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
+C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb

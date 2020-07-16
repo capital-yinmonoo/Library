@@ -1,7 +1,62 @@
 ﻿
 @{
     ViewBag.Title = "Book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Book</h2>
 
+<div class="container-fluid" id="content_zip">
+
+    <div class="row">
+        <div class="col-xl-12 col-md-12 mb-2">
+            <div class="card border-left-custom2 shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="tbmember" class="hrtable col-sm-12 col-md-12">
+                            <thead>
+                                <tr>
+                                    <th>BookID:</th>
+                                    <th>BookName:</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var table = $('#tbmember').DataTable(
+                {
+                    "language": {
+                        "info": "Display _START_ to _END_ of _TOTAL_ records",
+                    },
+                    "oLanguage": {
+                        "sLengthMenu": "Display _MENU_ records",
+                    },
+                    "ajax": {
+                        "url": "../Book/GetBookList",
+                        "type": "GET",
+                        "datatype": "json",
+                        "dataSrc": ""
+                    },
+                    "columns": [
+                        { "data": "BookID", orderable: false, "width": "13%" },
+                        { "data": "BookName", orderable: false, "width": "13%" }
+                    ],
+                }
+            );
+        });
+
+    </script>
+
+}

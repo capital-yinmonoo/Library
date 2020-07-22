@@ -234,6 +234,10 @@
       <Project>{00696871-7f3c-456d-a299-f7ae52d82966}</Project>
       <Name>LibraryBL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LibraryModel\LibraryModel.csproj">
+      <Project>{f78ca0c2-f420-4b89-968a-ac48177fdb7f}</Project>
+      <Name>LibraryModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

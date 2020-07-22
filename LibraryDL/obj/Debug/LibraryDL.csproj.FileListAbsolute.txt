@@ -15,3 +15,8 @@ C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssemblyReference.cache
 C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
 C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
 C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\LibraryDL\bin\Debug\EntityFramework.dll
+C:\My Data\Projects\Library\Library\LibraryDL\bin\Debug\EntityFramework.SqlServer.dll
+C:\My Data\Projects\Library\Library\LibraryDL\bin\Debug\EntityFramework.xml
+C:\My Data\Projects\Library\Library\LibraryDL\bin\Debug\EntityFramework.SqlServer.xml
+C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CopyComplete

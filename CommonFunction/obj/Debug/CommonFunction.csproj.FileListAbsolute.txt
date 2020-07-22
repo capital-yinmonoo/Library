@@ -20,7 +20,6 @@ C:\Library\Library\CommonFunction\bin\Debug\CommonFunction.dll
 C:\Library\Library\CommonFunction\bin\Debug\CommonFunction.pdb
 C:\Library\Library\CommonFunction\bin\Debug\Newtonsoft.Json.dll
 C:\Library\Library\CommonFunction\bin\Debug\Newtonsoft.Json.xml
-C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.csprojAssemblyReference.cache
 C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CoreCompileInputs.cache
 C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CopyComplete
 C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.dll

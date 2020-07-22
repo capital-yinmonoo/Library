@@ -223,6 +223,7 @@ C:\Library\Library\Library\bin\Antlr3.Runtime.dll
 C:\Library\Library\Library\bin\CommonFunction.dll
 C:\Library\Library\Library\bin\EntityFramework.dll
 C:\Library\Library\Library\bin\LibraryBL.dll
+C:\Library\Library\Library\bin\LibraryModel.dll
 C:\Library\Library\Library\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Library\Library\Library\bin\Microsoft.Web.Infrastructure.dll
 C:\Library\Library\Library\bin\Newtonsoft.Json.dll
@@ -237,8 +238,9 @@ C:\Library\Library\Library\bin\WebGrease.dll
 C:\Library\Library\Library\bin\LibraryDL.dll
 C:\Library\Library\Library\bin\CommonFunction.pdb
 C:\Library\Library\Library\bin\LibraryBL.pdb
+C:\Library\Library\Library\bin\LibraryBL.dll.config
+C:\Library\Library\Library\bin\LibraryModel.pdb
 C:\Library\Library\Library\bin\EntityFramework.xml
-C:\Library\Library\Library\bin\EntityFramework.SqlServer.xml
 C:\Library\Library\Library\bin\Newtonsoft.Json.xml
 C:\Library\Library\Library\bin\System.Web.Helpers.xml
 C:\Library\Library\Library\bin\System.Web.Mvc.xml
@@ -250,10 +252,11 @@ C:\Library\Library\Library\bin\System.Web.WebPages.Razor.xml
 C:\Library\Library\Library\bin\Antlr3.Runtime.pdb
 C:\Library\Library\Library\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Library\Library\Library\bin\LibraryDL.pdb
+C:\Library\Library\Library\bin\LibraryDL.dll.config
 C:\Library\Library\Library\obj\Debug\Library.csprojAssemblyReference.cache
 C:\Library\Library\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
 C:\Library\Library\Library\obj\Debug\Library.csproj.CopyComplete
 C:\Library\Library\Library\obj\Debug\Library.dll
 C:\Library\Library\Library\obj\Debug\Library.pdb
-C:\My Data\Projects\Library\Library\Library\bin\LibraryModel.dll
-C:\My Data\Projects\Library\Library\Library\bin\LibraryModel.pdb
+C:\Library\Library\Library\bin\EntityFramework.SqlServer.dll
+C:\Library\Library\Library\bin\EntityFramework.SqlServer.xml

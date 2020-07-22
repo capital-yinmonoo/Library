@@ -10,8 +10,9 @@ namespace LibraryModel
     {
         public string MemberID { get; set; }
         public string MemberName { get; set; }
-        public string Password { get; set; }
+        public string MemberPassword { get; set; }
         public string ContactNo { get; set; }
         public string Address { get; set; }
+        public string Photo { get; set; }
     }
 }

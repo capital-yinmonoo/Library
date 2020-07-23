@@ -23,12 +23,11 @@ namespace Library
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/style.css",
+                "~/Content/fontawesome-all.min.css",
+                "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/Common.css",
-                       "~/Content/cdnDatatables.css",
-                      "~/Content/fontawesome-all.min.css"));
+                       "~/Content/cdnDatatables.css"));
         }
     }
 }

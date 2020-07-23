@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LibraryEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_Book" EntityType="LibraryModel.M_Book" />
+    <EntitySet Name="M_Member" EntityType="LibraryModel.M_Member" />
+  </EntityContainer>
   <EntityType Name="M_Book">
     <Key>
       <PropertyRef Name="BookID" />
@@ -12,14 +16,11 @@
     <Key>
       <PropertyRef Name="MemberID" />
     </Key>
-    <Property Name="MemberID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MemberID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MemberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MemberPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ContactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="LibraryEntities3" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="M_Book" EntityType="Self.M_Book" />
-    <EntitySet Name="M_Member" EntityType="Self.M_Member" />
-  </EntityContainer>
 </Schema>

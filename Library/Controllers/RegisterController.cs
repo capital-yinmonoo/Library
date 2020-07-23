@@ -24,27 +24,29 @@ namespace Library.Controllers
             return View();
         }
 
-        public ActionResult Register_Entry()
+        public ActionResult Register_Entry(string id)
         {
-            rml.Photo = "Default.Photo";
+            //rml.Photo = "Default.Photo";
+            //return View(rml);
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+             
+                rml.MemberID = id;
+                ViewBag.MemberID = id;
+               
+                rml = rbl.SearchMember(rml);
+            }
+            else
+            {
+             
+                ViewBag.MemberID= "";
+                rml.Photo = "Default.png";
+            }
             return View(rml);
         }
 
         public ActionResult Register_List()
         {
-            String Imsg = Session["Imsg"] as string;
-            String Umsg = Session["Umsg"] as string;
-            String EImsg = Session["EImsg"] as string;
-            String EUmsg = Session["EUmsg"] as string;
-            ViewBag.Imsg = Imsg;
-            ViewBag.Umsg = Umsg;
-            ViewBag.EImsg = EImsg;
-            ViewBag.IUmsg = EUmsg;
-
-            Session["Imsg"] = "";
-            Session["Umsg"] = "";
-            Session["EImsg"] = "";
-            Session["EUmsg"] = "";
             return View();
         }
 
@@ -62,7 +64,23 @@ namespace Library.Controllers
             //RegisterBL rbl = new RegisterBL();
             if (rm != null)
             {
-               
+                HttpPostedFileBase imgfile = Request.Files["imgdata"];
+                string photoname = string.Empty;
+                photoname = imgfile.FileName;
+                if (!string.IsNullOrWhiteSpace(photoname))
+                {
+                    if (!Directory.Exists(Photo))
+                    {
+                        Directory.CreateDirectory(Photo);
+                    }
+                    string path = Photo + rm.MemberID + Path.GetExtension(photoname);
+                    imgfile.SaveAs(path);
+                    rm.Photo = rm.MemberID + Path.GetExtension(photoname);
+                }
+                else
+                {
+                    rm.Photo = "Default.png";
+                }
                 rbl.Member_Save(rm);
             }
             return RedirectToAction("Register_List");

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="M_Book">
           <Key>
             <PropertyRef Name="BookID" />
@@ -22,16 +22,20 @@
           <Property Name="MemberPassword" Type="varchar" MaxLength="50" />
           <Property Name="ContactNo" Type="varchar" MaxLength="20" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="LibraryModelStoreContainer">
           <EntitySet Name="M_Book" EntityType="Self.M_Book" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="M_Member" EntityType="Self.M_Member" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LibraryEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="M_Book" EntityType="LibraryModel.M_Book" />
+          <EntitySet Name="M_Member" EntityType="LibraryModel.M_Member" />
+        </EntityContainer>
         <EntityType Name="M_Book">
           <Key>
             <PropertyRef Name="BookID" />
@@ -44,16 +48,13 @@
           <Key>
             <PropertyRef Name="MemberID" />
           </Key>
-          <Property Name="MemberID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MemberID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MemberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MemberPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ContactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="LibraryEntities3" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="M_Book" EntityType="Self.M_Book" />
-          <EntitySet Name="M_Member" EntityType="Self.M_Member" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -63,20 +64,21 @@
           <EntitySetMapping Name="M_Book">
             <EntityTypeMapping TypeName="LibraryModel.M_Book">
               <MappingFragment StoreEntitySet="M_Book">
-                <ScalarProperty Name="BookID" ColumnName="BookID" />
-                <ScalarProperty Name="BookName" ColumnName="BookName" />
                 <ScalarProperty Name="BookFlag" ColumnName="BookFlag" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="M_Member">
             <EntityTypeMapping TypeName="LibraryModel.M_Member">
               <MappingFragment StoreEntitySet="M_Member">
-                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
-                <ScalarProperty Name="MemberName" ColumnName="MemberName" />
-                <ScalarProperty Name="MemberPassword" ColumnName="MemberPassword" />
-                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="MemberPassword" ColumnName="MemberPassword" />
+                <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -4,20 +4,21 @@
     <EntitySetMapping Name="M_Book">
       <EntityTypeMapping TypeName="LibraryModel.M_Book">
         <MappingFragment StoreEntitySet="M_Book">
-          <ScalarProperty Name="BookID" ColumnName="BookID" />
-          <ScalarProperty Name="BookName" ColumnName="BookName" />
           <ScalarProperty Name="BookFlag" ColumnName="BookFlag" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="M_Member">
       <EntityTypeMapping TypeName="LibraryModel.M_Member">
         <MappingFragment StoreEntitySet="M_Member">
-          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
-          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
-          <ScalarProperty Name="MemberPassword" ColumnName="MemberPassword" />
-          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="MemberPassword" ColumnName="MemberPassword" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

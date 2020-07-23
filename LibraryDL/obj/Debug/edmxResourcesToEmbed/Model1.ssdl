@@ -17,6 +17,7 @@
     <Property Name="MemberPassword" Type="varchar" MaxLength="50" />
     <Property Name="ContactNo" Type="varchar" MaxLength="20" />
     <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="LibraryModelStoreContainer">
     <EntitySet Name="M_Book" EntityType="Self.M_Book" Schema="dbo" store:Type="Tables" />

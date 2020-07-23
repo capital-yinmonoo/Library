@@ -14,5 +14,7 @@ namespace LibraryModel
         public string ContactNo { get; set; }
         public string Address { get; set; }
         public string Photo { get; set; }
+
+        public string Mode { get; set; }
     }
 }

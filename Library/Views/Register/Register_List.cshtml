@@ -56,7 +56,12 @@
                         "dataSrc": ""
                     },
                     "columns": [
-                        { "data": "MemberID", orderable: false, "width": "13%" },
+                        {
+                            "data": "MemberID", "render": function (data, type, row) {
+                                return '<a href="../Register/Register_Entry/' + row.MemberID + '">' + row.MemberID + '</a>';
+                            }, 
+                        },
+                        //{ "data": "MemberID", orderable: false, "width": "13%" },
                         { "data": "MemberName", orderable: false, "width": "13%" },
                         { "data": "MemberPassword", orderable: false, "width": "13%" },
                         { "data": "ContactNo", orderable: false, "width": "13%" },

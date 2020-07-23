@@ -2,9 +2,17 @@
 @{
     ViewBag.Title = "Register Entry";
     Layout = "~/Views/Shared/_Layout.cshtml";
-   
-}
 
+}
+<style>
+    .imgcss {
+        max-height: 130px;
+        max-width: 130px;
+        width: auto;
+        height: auto;
+        padding-left: 20px;
+    }
+</style>
 
 @using (Html.BeginForm("Member_Save", "Register", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
 {
@@ -24,12 +32,12 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-xl-2 col-md-3">
-                                <label for="UserID">MemberID:</label><label style="color:red;">&nbsp;*</label>
+                            <div class="form-group col-xl-2 col-md-2">
+                                <label for="MemberID">MemberID:</label><label style="color:red;">&nbsp;*</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
-                                    </div>
+                                    @*<div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                                        </div>*@
 
                                     @Html.TextBoxFor(rm => rm.MemberID, new
                                {
@@ -44,14 +52,13 @@
                                })
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-xl-2 col-md-3">
-                                <label for="UserName">MemberName:</label><label style="color:red;">&nbsp;*</label>
+         
+                            <div class="form-group col-xl-2 col-md-2">
+                                <label for="MemberName">MemberName:</label><label style="color:red;">&nbsp;*</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
-                                    </div>
+                                    @*<div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
+                                        </div>*@
                                     @Html.TextBoxFor(rm => rm.MemberName, new
                                {
                                    @class = "form-control input-sm",
@@ -64,14 +71,13 @@
                                })
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-xl-2 col-md-3">
-                                <label for="Password">MemberPassword:</label><label style="color:red;">&nbsp;*</label>
+                     
+                            <div class="form-group col-xl-2 col-md-2">
+                                <label for="MemberPassword">MemberPassword:</label><label style="color:red;">&nbsp;*</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
-                                    </div>
+                                    @*<div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                        </div>*@
                                     @Html.TextBoxFor(rm => rm.MemberPassword, new
                                {
                                    @class = "form-control input-sm",
@@ -85,14 +91,13 @@
                                })
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-xl-2 col-md-3">
-                                <label for="Password">ContactNo:</label><label style="color:red;">&nbsp;*</label>
+                     
+                            <div class="form-group col-xl-2 col-md-2">
+                                <label for="ContactNo">ContactNo:</label><label style="color:red;">&nbsp;*</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
-                                    </div>
+                                    @*<div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                        </div>*@
                                     @Html.TextBoxFor(rm => rm.ContactNo, new
                                {
                                    @class = "form-control input-sm",
@@ -108,12 +113,12 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-xl-2 col-md-3">
-                                <label for="Password">Address:</label><label style="color:red;">&nbsp;*</label>
+                            <div class="form-group col-xl-2 col-md-2">
+                                <label for="Address">Address:</label><label style="color:red;">&nbsp;*</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
-                                    </div>
+                                    @*<div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                        </div>*@
                                     @Html.TextBoxFor(rm => rm.Address, new
                                {
                                    @class = "form-control input-sm",
@@ -147,11 +152,56 @@
                         <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
                             <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Save</button>
                         </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+
+                            <button type="button" id="btnupdate" class="btn btn-warning col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Update</button>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+
+                            <button type="button" id="btncancel" class="btn btn-dark col-xl-2" tabindex="38"><i class="fa fa-cross"></i>&nbsp; Cancel</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var id = '@ViewBag.MemberID';
+            if (id == '' || id == null) {
+                $("#btnupdate").css("display", "none");
+                $("#btncancel").css("display", "none");
+            }
+            else {
+                $("#btnSave").css("display", "none");
+                $("#btnupdate").css("display", "block");
+                $("#btncancel").css("display", "block");
+            }
+          
+        });
+
+        function showpreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgpreview').css('visibility', 'visible');
+                    $('#imgpreview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+
+        }
+    </script>
 }
 
 

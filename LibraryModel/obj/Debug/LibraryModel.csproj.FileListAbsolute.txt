@@ -3,3 +3,4 @@ C:\Library\Library\LibraryModel\bin\Debug\LibraryModel.pdb
 C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csproj.CoreCompileInputs.cache
 C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.dll
 C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.pdb
+C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csprojAssemblyReference.cache

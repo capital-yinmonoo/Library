@@ -19,5 +19,6 @@ namespace LibraryDL
         public string MemberPassword { get; set; }
         public string ContactNo { get; set; }
         public string Address { get; set; }
+        public string Photo { get; set; }
     }
 }

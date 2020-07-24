@@ -1,0 +1,102 @@
+﻿@model LibraryModel.BookModel
+@{
+    /**/
+
+    ViewBag.Title = "Book_Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("M_BookSave", "Book", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+{
+    <div class="container-fluid" id="content_zip">
+        <div class="form-row">
+            <div class="form-group col-xl-2 col-md-2" style="width:17%;">
+                <label for="MemberID">BookID:</label><label style="color:red;">&nbsp;*</label>
+                <div class="input-group">
+                    @*<div class="input-group-prepend">
+                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                        </div>*@
+                    @Html.TextBoxFor(bm => bm.BookID, new
+               {
+                   @class = "form-control input-sm",
+                   @tabindex = "1",
+                   @required = "required",
+                   @id = "txtBookID",
+                   @autofocus = "autofocus",
+                   maxlength = "10",
+
+
+               })
+                </div>
+            </div>
+            <div class="form-group col-xl-2 col-md-2" style="width:17%;">
+                <label for="MemberID">BookName:</label><label style="color:red;">&nbsp;*</label>
+                <div class="input-group">
+                    @*<div class="input-group-prepend">
+                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                        </div>*@
+                    @Html.TextBoxFor(bm => bm.BookName, new
+               {
+                   @class = "form-control input-sm",
+                   @tabindex = "1",
+                   @required = "required",
+                   @id = "txtBookName",
+                   @autofocus = "autofocus",
+                   maxlength = "100",
+
+
+               })
+                </div>
+            </div>
+            <div class="form-group col-xl-2 col-md-2" style="width:17%;">
+                <label for="MemberID">BookType:</label><label style="color:red;">&nbsp;*</label>
+                <div class="input-group">
+
+                    @Html.DropDownListFor(bm => bm.BookType, new SelectList(Enumerable.Empty<SelectListItem>(), "", ""), "-Select-",new
+                           {
+                               @class = "select2 form-control input-sm",
+                               //@required = "required",
+                               @id = "ddlBook",
+                           })
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xl-12 text-center">
+                <div class="card border-bottom-success shadow h-100">
+                    <div class="card-body">
+                        <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+                            <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+           SelectBook();
+
+        });
+
+        function SelectBook() {
+            $.ajax({
+                url: '@Url.Action("GetBookType", "Book")',
+                type: "GET",
+                dataType: "JSON",
+                dataSrc: '',
+                success: function (items) {
+                    $.each(items, function (i, item) {
+                        $("#ddlBook").append(
+                            $('<option></option>').val(item.BookTypeID).html(item.BookType));
+                    });
+                    @*$("#ddlBook").val('@Model.BookTypeID');*@
+                }
+            });
+        }
+    </script>
+}

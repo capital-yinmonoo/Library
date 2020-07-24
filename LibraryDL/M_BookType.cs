@@ -12,10 +12,9 @@ namespace LibraryDL
     using System;
     using System.Collections.Generic;
     
-    public partial class M_Book
+    public partial class M_BookType
     {
-        public string BookID { get; set; }
-        public string BookName { get; set; }
+        public int BookTypeID { get; set; }
         public string BookType { get; set; }
     }
 }

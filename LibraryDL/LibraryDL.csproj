@@ -74,6 +74,9 @@
     <Compile Include="M_Book.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="M_BookType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="M_Member.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

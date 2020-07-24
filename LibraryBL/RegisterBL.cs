@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibraryDL;
 using LibraryModel;
+using System.Web;
 
 
 
@@ -49,6 +50,29 @@ namespace LibraryBL
             return msg;
         }
 
+        public string Member_Update(RegisterModel rm)
+        {
+          
+            LibraryEntities3 lbe = new LibraryEntities3();
+            string msg = string.Empty;
+            M_Member mb = lbe.M_Member.Where(c => c.MemberID.Equals(rm.MemberID)).SingleOrDefault();
+            mb.MemberName = rm.MemberName;
+            mb.MemberPassword = rm.MemberPassword;
+            mb.ContactNo = rm.ContactNo;
+            mb.Address = rm.Address;
+            mb.Photo = rm.Photo;
+            try
+            {
+                lbe.SaveChanges();
+                msg = "OK";
+            }
+            catch (Exception ex)
+            {
+                msg = ex.ToString();
+            }
+            return msg;
+        }
+
         public RegisterModel SearchMember(RegisterModel rml)
         {
             BaseDL bdl = new BaseDL();
@@ -71,6 +95,18 @@ namespace LibraryBL
             }
 
             return rml;
+        }
+
+        public string Check_Member(RegisterModel rm)
+        {
+            LibraryEntities3 lb = new LibraryEntities3();
+            string msg = string.Empty;
+            M_Member update = lb.M_Member.Where(c => c.MemberID.Equals(rm.MemberID)).SingleOrDefault();
+            if (update != null)
+                msg = update.MemberID;
+            else
+                msg = "";
+            return msg;
         }
 
         public DataTable MemberCheck(string id)

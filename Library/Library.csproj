@@ -205,6 +205,7 @@
     <Content Include="Views\Register\Register_List.cshtml" />
     <Content Include="Views\Book\Book.cshtml" />
     <Content Include="Views\Register\Register_Entry.cshtml" />
+    <Content Include="Views\Book\Book_Entry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,9 +4,16 @@
     <Key>
       <PropertyRef Name="BookID" />
     </Key>
-    <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookID" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="BookName" Type="varchar" MaxLength="50" />
-    <Property Name="BookFlag" Type="int" />
+    <Property Name="BookType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="M_BookType">
+    <Key>
+      <PropertyRef Name="BookTypeID" />
+    </Key>
+    <Property Name="BookTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookType" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="M_Member">
     <Key>
@@ -21,6 +28,7 @@
   </EntityType>
   <EntityContainer Name="LibraryModelStoreContainer">
     <EntitySet Name="M_Book" EntityType="Self.M_Book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="M_BookType" EntityType="Self.M_BookType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="M_Member" EntityType="Self.M_Member" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

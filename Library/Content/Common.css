@@ -29,7 +29,9 @@
 .text-custom1{
     color:chocolate;
 }
-
+.border-left-info {
+    border-left: .25rem solid #36b9cc!important;
+}
 .border-left-custom1 {
     border-left: .25rem solid chocolate !important;
 }
@@ -46,10 +48,10 @@
 
 .hrtable thead th {
     color: black;
-    background: cornsilk;
+    background: #17a2b8;
 }
 .hrtable tr:nth-child(even) {
-    background: #FFDFBB;
+    background: #adb5bd;
 }
 
 .hrtable tr{

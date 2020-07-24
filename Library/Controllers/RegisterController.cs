@@ -26,14 +26,10 @@ namespace Library.Controllers
 
         public ActionResult Register_Entry(string id)
         {
-            //rml.Photo = "Default.Photo";
-            //return View(rml);
             if (!string.IsNullOrWhiteSpace(id))
             {
-             
                 rml.MemberID = id;
                 ViewBag.MemberID = id;
-               
                 rml = rbl.SearchMember(rml);
             }
             else
@@ -60,28 +56,57 @@ namespace Library.Controllers
         public ActionResult Member_Save(RegisterModel rm)
         {
             RegisterBL rbl = new RegisterBL();
-            //string flag = string.Empty;
-            //RegisterBL rbl = new RegisterBL();
+           
             if (rm != null)
             {
-                HttpPostedFileBase imgfile = Request.Files["imgdata"];
-                string photoname = string.Empty;
-                photoname = imgfile.FileName;
-                if (!string.IsNullOrWhiteSpace(photoname))
+                var mid = rbl.Check_Member(rm);
+
+               
+                if (mid == null || mid == "")
                 {
-                    if (!Directory.Exists(Photo))
+                    HttpPostedFileBase imgfile = Request.Files["imgdata"];
+                    string photoname = string.Empty;
+                    photoname = imgfile.FileName;
+                    if (!string.IsNullOrWhiteSpace(photoname))
                     {
-                        Directory.CreateDirectory(Photo);
+                        if (!Directory.Exists(Photo))
+                        {
+                            Directory.CreateDirectory(Photo);
+                        }
+                        string path = Photo + rm.MemberID + Path.GetExtension(photoname);
+                        imgfile.SaveAs(path);
+                        rm.Photo = rm.MemberID + Path.GetExtension(photoname);
                     }
-                    string path = Photo + rm.MemberID + Path.GetExtension(photoname);
-                    imgfile.SaveAs(path);
-                    rm.Photo = rm.MemberID + Path.GetExtension(photoname);
+                    else
+                    {
+                        rm.Photo = "Default.png";
+                    }
+                    rbl.Member_Save(rm);
                 }
                 else
                 {
-                    rm.Photo = "Default.png";
+                    HttpPostedFileBase imgfile = Request.Files["imgdata"];
+                    string photoname = string.Empty;
+                    photoname = imgfile.FileName;
+                    if (!string.IsNullOrWhiteSpace(photoname))
+                    {
+                        if (!Directory.Exists(Photo))
+                        {
+                            Directory.CreateDirectory(Photo);
+                        }
+                        string path = Photo + rm.MemberID + Path.GetExtension(photoname);
+                        imgfile.SaveAs(path);
+                        rm.Photo = rm.MemberID + Path.GetExtension(photoname);
+                    }
+                    else
+                    {
+                        DataTable dt = rbl.MemberCheck(mid);
+
+                        rm.Photo = dt.Rows[0]["Photo"].ToString();
+                    }
+                    
+                    rbl.Member_Update(rm);
                 }
-                rbl.Member_Save(rm);
             }
             return RedirectToAction("Register_List");
         }

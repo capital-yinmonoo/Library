@@ -4,9 +4,17 @@
     <EntitySetMapping Name="M_Book">
       <EntityTypeMapping TypeName="LibraryModel.M_Book">
         <MappingFragment StoreEntitySet="M_Book">
-          <ScalarProperty Name="BookFlag" ColumnName="BookFlag" />
+          <ScalarProperty Name="BookType" ColumnName="BookType" />
           <ScalarProperty Name="BookName" ColumnName="BookName" />
           <ScalarProperty Name="BookID" ColumnName="BookID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_BookType">
+      <EntityTypeMapping TypeName="LibraryModel.M_BookType">
+        <MappingFragment StoreEntitySet="M_BookType">
+          <ScalarProperty Name="BookType" ColumnName="BookType" />
+          <ScalarProperty Name="BookTypeID" ColumnName="BookTypeID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

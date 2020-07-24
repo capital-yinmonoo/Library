@@ -6,7 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="d20414ef8fc84ded9533cd48faafdd8e" Name="Diagram1">
         <EntityTypeShape EntityType="LibraryModel.M_Book" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="LibraryModel.M_Member" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="LibraryModel.M_BookType" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="LibraryModel.M_Member" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

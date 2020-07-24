@@ -10,12 +10,12 @@
 {
     <div class="container-fluid" id="content_zip">
         <div class="form-row">
-            <div class="form-group col-xl-2 col-md-2" style="width:17%;">
+            <div class="form-group col-xl-4 col-md-4" style="width:17%;">
                 <label for="MemberID">BookID:</label><label style="color:red;">&nbsp;*</label>
                 <div class="input-group">
-                    @*<div class="input-group-prepend">
-                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
-                        </div>*@
+                    <div class="input-group-prepend">
+                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                    </div>
                     @Html.TextBoxFor(bm => bm.BookID, new
                {
                    @class = "form-control input-sm",
@@ -29,29 +29,31 @@
                })
                 </div>
             </div>
-            <div class="form-group col-xl-2 col-md-2" style="width:17%;">
-                <label for="MemberID">BookName:</label><label style="color:red;">&nbsp;*</label>
-                <div class="input-group">
-                    @*<div class="input-group-prepend">
-                            <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
-                        </div>*@
-                    @Html.TextBoxFor(bm => bm.BookName, new
-               {
-                   @class = "form-control input-sm",
-                   @tabindex = "1",
-                   @required = "required",
-                   @id = "txtBookName",
-                   @autofocus = "autofocus",
-                   maxlength = "100",
+            <div class="form-group col-xl-4 col-md-4" style="width:17%;">
+            <label for="MemberID">BookName:</label><label style="color:red;">&nbsp;*</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
+                    </div>
+                @Html.TextBoxFor(bm => bm.BookName, new
+           {
+               @class = "form-control input-sm",
+               @tabindex = "1",
+               @required = "required",
+               @id = "txtBookName",
+               @autofocus = "autofocus",
+               maxlength = "100",
 
 
-               })
-                </div>
+           })
             </div>
-            <div class="form-group col-xl-2 col-md-2" style="width:17%;">
+        </div>
+            <div class="form-group col-xl-4 col-md-4" style="width:17%;">
                 <label for="MemberID">BookType:</label><label style="color:red;">&nbsp;*</label>
                 <div class="input-group">
-
+                    <div class="input-group-prepend">
+                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-book"></i></span>
+                    </div>
                     @Html.DropDownListFor(bm => bm.BookType, new SelectList(Enumerable.Empty<SelectListItem>(), "", ""), "-Select-",new
                            {
                                @class = "select2 form-control input-sm",

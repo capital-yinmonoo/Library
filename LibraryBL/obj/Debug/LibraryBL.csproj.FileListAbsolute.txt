@@ -16,23 +16,6 @@ C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCom
 C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
 C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.dll
 C:\My Data\Projects\Library\Library\LibraryBL\obj\Debug\LibraryBL.pdb
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll.config
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryBL.pdb
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.dll
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.SqlServer.dll
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryDL.dll
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryModel.dll
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryDL.pdb
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryDL.dll.config
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryModel.pdb
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.xml
-C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.SqlServer.xml
-C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.csprojAssemblyReference.cache
-C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCompileInputs.cache
-C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
-C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.dll
-C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.pdb
 C:\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll.config
 C:\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll
 C:\Library\Library\LibraryBL\bin\Debug\LibraryBL.pdb
@@ -50,3 +33,20 @@ C:\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCompileInputs.cache
 C:\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
 C:\Library\Library\LibraryBL\obj\Debug\LibraryBL.dll
 C:\Library\Library\LibraryBL\obj\Debug\LibraryBL.pdb
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll.config
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryBL.dll
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryBL.pdb
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.dll
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.SqlServer.dll
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryModel.dll
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryDL.dll.config
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\LibraryModel.pdb
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.xml
+C:\My Data\Projects\Library\Library\Library\LibraryBL\bin\Debug\EntityFramework.SqlServer.xml
+C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.csprojAssemblyReference.cache
+C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CoreCompileInputs.cache
+C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.csproj.CopyComplete
+C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.dll
+C:\My Data\Projects\Library\Library\Library\LibraryBL\obj\Debug\LibraryBL.pdb

@@ -9,20 +9,6 @@ C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssembly
 C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
 C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
 C:\My Data\Projects\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll.config
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\LibraryDL.pdb
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.dll
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.SqlServer.dll
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.xml
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.SqlServer.xml
-C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssemblyReference.cache
-C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
-C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CopyComplete
-C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
-C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb
 C:\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll.config
 C:\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll
 C:\Library\Library\LibraryDL\bin\Debug\LibraryDL.pdb
@@ -37,3 +23,17 @@ C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
 C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CopyComplete
 C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
 C:\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll.config
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.dll
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.SqlServer.dll
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.xml
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\EntityFramework.SqlServer.xml
+C:\My Data\Projects\Library\Library\Library\LibraryDL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.csprojAssemblyReference.cache
+C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CoreCompileInputs.cache
+C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.csproj.CopyComplete
+C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\Library\LibraryDL\obj\Debug\LibraryDL.pdb

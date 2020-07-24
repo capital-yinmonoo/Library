@@ -1,4 +1,4 @@
-﻿
+﻿@model LibraryModel.UserModel
 @{
     Layout = null;
 }
@@ -36,63 +36,101 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
-    <div class="limiter">
-        <div class="container-login100" style="background-color:cadetblue;">
-            <div class="wrap-login100">
-                <div class="login100-form-title" style="background-image: url(@Url.Content("~/Content/login/images/bg-01.jpg"));">
-                    <span class="login100-form-title-1">
-                        Sign In
-                    </span>
-                </div>
-
-                <form class="login100-form validate-form">
-                    <div class="wrap-input100 validate-input m-b-26" data-validate="UserID is required">
-                        <span class="label-input100">UserID</span>
-                        <input class="input100" type="text" name="username" placeholder="Enter UserID">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100">Password</span>
-                        <input class="input100" type="password" name="pass" placeholder="Enter password">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="flex-sb-m w-full p-b-30">
-                        <div>
-                            <a  class="txt1" style="color:red;">
-                                @ViewBag.Errormsg
-                            </a>
+    @using (Html.BeginForm("CheckLogin", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="limiter">
+                <div class="container-login100" style="background-color:cadetblue;">
+                    <div class="wrap-login100">
+                        <div class="login100-form-title" style="background-image: url(@Url.Content("~/Content/login/images/bg-01.jpg"));">
+                            <span class="login100-form-title-1">
+                                Sign In
+                            </span>
                         </div>
-                    </div>
 
-                    <div class="container-login100-form-btn" style="padding-left:80px;">
-                        <button class="login100-form-btn">
-                            Login
-                        </button>
-                    </div>
-                </form>
-            </div>
+                        <form class="login100-form validate-form">
+                            @*<div class="wrap-input100 validate-input m-b-26" data-validate="UserID is required">
+            <span class="label-input100">UserID</span>
+            <input class="input100" type="text" name="username" placeholder="Enter UserID">
+            <span class="focus-input100"></span>
         </div>
-    </div>
 
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/vendor/jquery/jquery-3.2.1.min.js")"></script>
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/vendor/animsition/js/animsition.min.js")"></script>
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/vendor/bootstrap/js/popper.js")"></script>
-    <script src="@Url.Content("~/Content/login/vendor/bootstrap/js/bootstrap.min.js")"></script>
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/vendor/select2/select2.min.js")"></script>
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/vendor/daterangepicker/moment.min.js")"></script>
-    <script src="@Url.Content("~/Content/login/vendor/daterangepicker/daterangepicker.js")"></script>
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/vendor/countdowntime/countdowntime.js")"></script>
-    <!--===============================================================================================-->
-    <script src="@Url.Content("~/Content/login/js/main.js")"></script>
+        <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+            <span class="label-input100">Password</span>
+            <input class="input100" type="password" name="pass" placeholder="Enter password">
+            <span class="focus-input100"></span>
+        </div>*@
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="userid">UserID</label>
+                                    @Html.TextBoxFor(um => um.UserID, new
+                               {
+                                   @class = "form-control input-sm",
+                                   @tabindex = "1",
+                                   @required = "required",
+                                   @id = "txtUserID",
+                                   @autofocus = "autofocus",
+                                   maxlength = "4",
+                                   placeholder = "Enter UserID"
+                               })
+                                </div>
+                            </div>
+                            <div class="card-body ">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    @Html.PasswordFor(um => um.Password, new
+                               {
+                                   @class = "form-control input-sm",
+                                   @tabindex = "2",
+                                   @required = "required",
+                                   @id = "txtPassword",
+                                   maxlength = "20",
+                                   placeholder = "Enter Password"
+                               })
+                                </div>
+                            </div>
+
+                          
+                             
+                                        <div class="card-body">
+                                            <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+                                                <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa login-box"></i>&nbsp; Login</button>
+                                            </div>
+                                        </div>
+                                  
+                          
+                            <div class="flex-sb-m w-full p-b-30">
+                                <div>
+                                    <a class="txt1" style="color:red;">
+                                        @ViewBag.ErrorMessage
+                                    </a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+      
+
+     }
+
+
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/vendor/jquery/jquery-3.2.1.min.js")"></script>
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/vendor/animsition/js/animsition.min.js")"></script>
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/vendor/bootstrap/js/popper.js")"></script>
+            <script src="@Url.Content("~/Content/login/vendor/bootstrap/js/bootstrap.min.js")"></script>
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/vendor/select2/select2.min.js")"></script>
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/vendor/daterangepicker/moment.min.js")"></script>
+            <script src="@Url.Content("~/Content/login/vendor/daterangepicker/daterangepicker.js")"></script>
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/vendor/countdowntime/countdowntime.js")"></script>
+            <!--===============================================================================================-->
+            <script src="@Url.Content("~/Content/login/js/main.js")"></script>
 
 </body>
 </html>

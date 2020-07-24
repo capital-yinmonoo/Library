@@ -28,5 +28,6 @@ namespace LibraryDL
         public virtual DbSet<M_Book> M_Book { get; set; }
         public virtual DbSet<M_BookType> M_BookType { get; set; }
         public virtual DbSet<M_Member> M_Member { get; set; }
+        public virtual DbSet<M_User> M_User { get; set; }
     }
 }

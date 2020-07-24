@@ -4,6 +4,7 @@
     <EntitySet Name="M_Book" EntityType="LibraryModel.M_Book" />
     <EntitySet Name="M_BookType" EntityType="LibraryModel.M_BookType" />
     <EntitySet Name="M_Member" EntityType="LibraryModel.M_Member" />
+    <EntitySet Name="M_User" EntityType="LibraryModel.M_User" />
   </EntityContainer>
   <EntityType Name="M_Book">
     <Key>
@@ -30,5 +31,13 @@
     <Property Name="ContactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="M_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

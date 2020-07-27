@@ -1,12 +1,12 @@
-C:\Library\Library\LibraryModel\bin\Debug\LibraryModel.dll
-C:\Library\Library\LibraryModel\bin\Debug\LibraryModel.pdb
-C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csprojAssemblyReference.cache
-C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csproj.CoreCompileInputs.cache
-C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.dll
-C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.pdb
 C:\My Data\Projects\Library\Library\Library\LibraryModel\bin\Debug\LibraryModel.dll
 C:\My Data\Projects\Library\Library\Library\LibraryModel\bin\Debug\LibraryModel.pdb
 C:\My Data\Projects\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.csprojAssemblyReference.cache
 C:\My Data\Projects\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.csproj.CoreCompileInputs.cache
 C:\My Data\Projects\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.dll
 C:\My Data\Projects\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.pdb
+C:\Library\Library\LibraryModel\bin\Debug\LibraryModel.dll
+C:\Library\Library\LibraryModel\bin\Debug\LibraryModel.pdb
+C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csproj.CoreCompileInputs.cache
+C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.dll
+C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.pdb
+C:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csprojAssemblyReference.cache

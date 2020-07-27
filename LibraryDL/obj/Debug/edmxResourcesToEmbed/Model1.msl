@@ -21,6 +21,11 @@
     <EntitySetMapping Name="M_Member">
       <EntityTypeMapping TypeName="LibraryModel.M_Member">
         <MappingFragment StoreEntitySet="M_Member">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
           <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />

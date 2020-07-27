@@ -20,5 +20,10 @@ namespace LibraryDL
         public string ContactNo { get; set; }
         public string Address { get; set; }
         public string Photo { get; set; }
+        public Nullable<System.DateTime> JoinDate { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedDate { get; set; }
+        public string UpdatedBy { get; set; }
     }
 }

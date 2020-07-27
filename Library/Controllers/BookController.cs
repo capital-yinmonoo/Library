@@ -13,15 +13,28 @@ namespace Library.Controllers
     {
         // GET: Book
         BookBL bbl = new BookBL();
+        BookModel bm = new BookModel();
         public ActionResult Book()
         {
             return View();
         }
 
 
-        public ActionResult Book_Entry()
+        public ActionResult Book_Entry(string id)
         {
-            return View();
+            //return View();
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                bm.BookID = id;
+                ViewBag.MemberID = id;
+                bm = bbl.Searchbook(bm);
+            }
+            else
+            {
+
+                ViewBag.MemberID = "";
+            }
+            return View(bm);
         }
 
 
@@ -40,7 +53,22 @@ namespace Library.Controllers
         }
         public ActionResult M_BookSave(BookModel bm)
         {
-            bbl.Book_Save(bm);
+            //bbl.Book_Save(bm);
+            //return RedirectToAction("Book");
+            if(bm !=null)
+            {
+                var mid = bbl.Check_Book(bm);
+
+                if (mid == null || mid == "")
+                {
+                    bbl.Book_Save(bm);
+                }
+                else
+                {
+                    bbl.Book_Update(bm);
+                }
+               
+            }
             return RedirectToAction("Book");
         }
     }

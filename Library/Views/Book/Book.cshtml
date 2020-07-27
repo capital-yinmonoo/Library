@@ -52,7 +52,11 @@
                         "dataSrc": ""
                     },
                     "columns": [
-                        { "data": "BookID", orderable: false, "width": "13%" },
+                        {
+                            "data": "BookID", "render": function (data, type, row) {
+                                return '<a href="../Book/Book_Entry/' + row.BookID + '">' + row.BookID + '</a>';
+                            },
+                        },
                         { "data": "BookName", orderable: false, "width": "13%" }
                     ],
                 }

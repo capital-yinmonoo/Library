@@ -36,8 +36,8 @@
                             <label for="MemberID">MemberID:</label><label style="color:red;">&nbsp;*</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.MemberID, new
                            {
                                @class = "form-control input-sm",
@@ -46,7 +46,7 @@
                                @id = "txtMemberID",
                                @autofocus = "autofocus",
                                maxlength = "10",
-                               
+
 
                            })
                             </div>
@@ -56,8 +56,8 @@
                             <label for="MemberName">MemberName:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.MemberName, new
                            {
                                @class = "form-control input-sm",
@@ -75,8 +75,8 @@
                             <label for="MemberPassword">MemberPassword:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.MemberPassword, new
                            {
                                @class = "form-control input-sm",
@@ -115,8 +115,8 @@
                             <label for="Address">Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-address-card"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-address-card"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.Address, new
                            {
                                @class = "form-control input-sm",
@@ -127,6 +127,27 @@
                                maxlength = "100",
 
 
+                           })
+                            </div>
+                        </div>
+                        <div class="form-group col-xl-2 col-md-4">
+                            <label for="JoinDate">Join Date</label><label style="color:red;">&nbsp;*</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fa fa-calendar-alt"></i></span>
+                                </div>
+
+                                @Html.TextBoxFor(sm => sm.JoinDate, "{0:dd-MM-yyyy}", new
+                           {
+                               @class = "form-control input-sm",
+                               @type = "date",
+                               placeHolder = "dd/MM/yyyy",
+                               @required = "required",
+                               @tabindex = "5",
+                               @id = "txtJoinDate",
+                               maxlength = "10",
+                               max = "12-12-2100",
+                               @Value = Model.JoinDate
                            })
                             </div>
                         </div>
@@ -162,8 +183,6 @@
 
             </div>
         </div>
-    @*</div>
-    <div class="row">*@
         <div class="col-xl-6 ">
             <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
 

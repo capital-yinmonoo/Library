@@ -12,6 +12,7 @@
           <Property Name="BookID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="BookName" Type="varchar" MaxLength="50" />
           <Property Name="BookType" Type="varchar" MaxLength="50" />
+          <Property Name="PDF" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="M_BookType">
           <Key>
@@ -30,6 +31,15 @@
           <Property Name="ContactNo" Type="varchar" MaxLength="20" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" />
           <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+          <Property Name="JoinDate" Type="date" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="char" MaxLength="10" />
+          <Property Name="Graduated" Type="bit" />
+          <Property Name="Master" Type="bit" />
+          <Property Name="Student" Type="bit" />
         </EntityType>
         <EntityType Name="M_User">
           <Key>
@@ -62,6 +72,7 @@
           <Property Name="BookID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="BookName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="BookType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PDF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="M_BookType">
           <Key>
@@ -80,6 +91,15 @@
           <Property Name="ContactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JoinDate" Type="DateTime" Precision="0" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Graduated" Type="Boolean" />
+          <Property Name="Master" Type="Boolean" />
+          <Property Name="Student" Type="Boolean" />
         </EntityType>
         <EntityType Name="M_User">
           <Key>
@@ -98,6 +118,7 @@
           <EntitySetMapping Name="M_Book">
             <EntityTypeMapping TypeName="LibraryModel.M_Book">
               <MappingFragment StoreEntitySet="M_Book">
+                <ScalarProperty Name="PDF" ColumnName="PDF" />
                 <ScalarProperty Name="BookType" ColumnName="BookType" />
                 <ScalarProperty Name="BookName" ColumnName="BookName" />
                 <ScalarProperty Name="BookID" ColumnName="BookID" />
@@ -115,6 +136,15 @@
           <EntitySetMapping Name="M_Member">
             <EntityTypeMapping TypeName="LibraryModel.M_Member">
               <MappingFragment StoreEntitySet="M_Member">
+                <ScalarProperty Name="Student" ColumnName="Student" />
+                <ScalarProperty Name="Master" ColumnName="Master" />
+                <ScalarProperty Name="Graduated" ColumnName="Graduated" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />

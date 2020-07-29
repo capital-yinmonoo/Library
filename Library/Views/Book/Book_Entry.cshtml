@@ -8,38 +8,36 @@
 
 @using (Html.BeginForm("M_BookSave", "Book", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
 {
-    <div class="container-fluid" id="content_zip">
-        <div class="form-row">
-            <div class="form-group col-xl-4 col-md-4" style="width:17%;">
-                <label for="MemberID">BookID:</label><label style="color:red;">&nbsp;*</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
-                    </div>
-                    @Html.TextBoxFor(bm => bm.BookID, new
-               {
-                   @class = "form-control input-sm",
-                   @tabindex = "1",
-                   @required = "required",
-                   @id = "txtBookID",
-                   @autofocus = "autofocus",
-                   maxlength = "10",
-
-
-               })
-                </div>
-            </div>
-            <div class="form-group col-xl-4 col-md-4" style="width:17%;">
-            <label for="MemberID">BookName:</label><label style="color:red;">&nbsp;*</label>
+<div class="container-fluid" id="content_zip">
+    <div class="form-row">
+        <div class="form-group col-xl-4 col-md-4" style="width:17%;">
+            <label for="MemberID">BookID:</label>
             <div class="input-group">
                 <div class="input-group-prepend">
-                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
-                    </div>
+                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                </div>
+                @Html.TextBoxFor(bm => bm.BookID, new
+           {
+               @class = "form-control input-sm",
+               @tabindex = "1",
+               @id = "txtBookID",
+               @autofocus = "autofocus",
+               maxlength = "10",
+
+
+           })
+            </div>
+        </div>
+        <div class="form-group col-xl-4 col-md-4" style="width:17%;">
+            <label for="MemberID">BookName:</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
+                </div>
                 @Html.TextBoxFor(bm => bm.BookName, new
            {
                @class = "form-control input-sm",
                @tabindex = "1",
-               @required = "required",
                @id = "txtBookName",
                @autofocus = "autofocus",
                maxlength = "100",
@@ -48,41 +46,83 @@
            })
             </div>
         </div>
+
+        <div class="form-group col-xl-4 col-md-4" style="width:17%;">
+            <label for="MemberID">BookType:</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-book"></i></span>
+                </div>
+                @Html.DropDownListFor(bm => bm.BookType, new SelectList(Enumerable.Empty<SelectListItem>(), "", ""), "-Select-",new
+                       {
+                           @class = "select2 form-control input-sm",
+                           //@required = "required",
+                           @id = "ddlBook",
+                       })
+            </div>
+        </div>
+    </div>
+    <div class="row">
             <div class="form-group col-xl-4 col-md-4" style="width:17%;">
-                <label for="MemberID">BookType:</label><label style="color:red;">&nbsp;*</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-book"></i></span>
+                <div class="form-group">
+                    @Html.LabelFor(bm => bm.PDF, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="pdffile" id="pdffile" class="form-control" accept=".pdf" />
                     </div>
-                    @Html.DropDownListFor(bm => bm.BookType, new SelectList(Enumerable.Empty<SelectListItem>(), "", ""), "-Select-",new
-                           {
-                               @class = "select2 form-control input-sm",
-                               //@required = "required",
-                               @id = "ddlBook",
-                           })
                 </div>
             </div>
-
         </div>
-        <div class="row">
-            <div class="col-xl-12 text-center">
-                <div class="card border-bottom-success shadow h-100">
-                    <div class="card-body">
-                        <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
-                            <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Save</button>
-                        </div>
+   
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <div class="card border-bottom-success shadow h-100">
+                <div class="card-body">
+                    <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+                        <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xl-6 ">
+            <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+
+                <button type="submit" id="btnupdate" class="btn btn-warning col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-save"></i>&nbsp; Update</button>
+
+            </div>
+        </div>
+        <div class="col-xl-6 ">
+            <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+
+                <button type="button" id="btncancel" class="btn btn-dark col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-cross"></i>&nbsp; Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 }
 @section Scripts{
     <script type="text/javascript">
         $(document).ready(function () {
-
+           
+            var id = '@ViewBag.BookID';
+            if (id == '' || id == null) {
+                $("#btnupdate").css("display", "none");
+                $("#btncancel").css("display", "none");
+            }
+            else {
+             
+                $('#txtBookID').attr('readonly', true);
+                $("#btnSave").css("display", "none");
+                $("#btnupdate").css("display", "block");
+                $("#btncancel").css("display", "block");
+            }
            SelectBook();
 
+        });
+
+         $('#btncancel').click(function () {
+             window.location.href =  '@Url.Action("Book", "Book")'
         });
 
         function SelectBook() {

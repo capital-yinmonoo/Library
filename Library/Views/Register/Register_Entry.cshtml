@@ -36,8 +36,8 @@
                             <label for="MemberID">MemberID:</label><label style="color:red;">&nbsp;*</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-id-card-alt"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.MemberID, new
                            {
                                @class = "form-control input-sm",
@@ -46,7 +46,7 @@
                                @id = "txtMemberID",
                                @autofocus = "autofocus",
                                maxlength = "10",
-                               
+
 
                            })
                             </div>
@@ -56,8 +56,8 @@
                             <label for="MemberName">MemberName:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-signature"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.MemberName, new
                            {
                                @class = "form-control input-sm",
@@ -75,8 +75,8 @@
                             <label for="MemberPassword">MemberPassword:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.MemberPassword, new
                            {
                                @class = "form-control input-sm",
@@ -115,8 +115,8 @@
                             <label for="Address">Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-address-card"></i></span>
-                                    </div>
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fas fa-address-card"></i></span>
+                                </div>
                                 @Html.TextBoxFor(rm => rm.Address, new
                            {
                                @class = "form-control input-sm",
@@ -127,6 +127,26 @@
                                maxlength = "100",
 
 
+                           })
+                            </div>
+                        </div>
+                        <div class="form-group col-xl-2 col-md-4">
+                            <label for="JoinDate">Join Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text text-info" id="basic-addon1"><i class="fa fa-calendar-alt"></i></span>
+                                </div>
+
+                                @Html.TextBoxFor(rm => rm.JoinDate, "{0:dd-MM-yyyy}", new
+                           {
+                               @class = "form-control input-sm",
+                               @type = "date",
+                               placeHolder = "dd/MM/yyyy",
+                               @tabindex = "5",
+                               @id = "txtJoinDate",
+                               maxlength = "10",
+                               max = "12-12-2100",
+                               @Value = Model.JoinDate
                            })
                             </div>
                         </div>
@@ -144,36 +164,89 @@
 
     </div>
     <div class="row">
-        <div class="col-xl-12 text-center">
-            <div class="card border-bottom-success shadow h-100">
-                <div class="card-body">
-                    <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
-                        <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Save</button>
+        <div class="form-group col-xl-2 col-md-4">
+            <div class="input-group">
+                <label for="Gender">Gender</label>
+                <div class="col-md-10">
+                    Male
+                    @Html.RadioButtonFor(model => model.Gender, "0")
+                    Female
+                    @Html.RadioButtonFor(model => model.Gender, "1")
+                </div>
+            </div>
+            </div>
+            <div class="form-group col-xl-2 col-md-4">
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            @Html.CheckBoxFor(rm => rm.Graduated, new
+                       {
+                           @tabindex = "30"
+                       })
+                        </div>
+                    </div>
+                    <label class="form-control" for="Graduated">Graduated</label>
+                </div>
+            </div>
+            <div class="form-group col-xl-2 col-md-4">
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            @Html.CheckBoxFor(rm => rm.Master, new
+                       {
+                           @tabindex = "30"
+                       })
+                        </div>
+                    </div>
+                    <label class="form-control" for="Master">Master</label>
+                </div>
+            </div>
+            <div class="form-group col-xl-2 col-md-4">
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            @Html.CheckBoxFor(rm => rm.Student, new
+                       {
+                           @tabindex = "30"
+                       })
+                        </div>
+                    </div>
+                    <label class="form-control" for="Student">Student</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 text-center">
+                <div class="card border-bottom-success shadow h-100">
+                    <div class="card-body">
+                        <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+                            <button type="submit" id="btnSave" class="btn btn-success col-xl-2" tabindex="38"><i class="fa fa-save"></i>&nbsp; Save</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 ">
-            <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+        <div class="row">
+            <div class="col-xl-6 ">
+                <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
 
-                <button type="submit" id="btnupdate" class="btn btn-warning col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-save"></i>&nbsp; Update</button>
+                    <button type="submit" id="btnupdate" class="btn btn-warning col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-save"></i>&nbsp; Update</button>
 
+                </div>
             </div>
-        </div>
-    @*</div>
-    <div class="row">*@
-        <div class="col-xl-6 ">
-            <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+            <div class="col-xl-6 ">
+                <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
 
-                <button type="button" id="btncancel" class="btn btn-dark col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-cross"></i>&nbsp; Cancel</button>
+                    <button type="button" id="btncancel" class="btn btn-dark col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-cross"></i>&nbsp; Cancel</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-      
- }
+
+    }
     @section Scripts{
         <script type="text/javascript">
         $(document).ready(function () {

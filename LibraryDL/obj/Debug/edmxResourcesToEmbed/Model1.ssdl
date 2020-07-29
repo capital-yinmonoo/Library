@@ -7,6 +7,7 @@
     <Property Name="BookID" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="BookName" Type="varchar" MaxLength="50" />
     <Property Name="BookType" Type="varchar" MaxLength="50" />
+    <Property Name="PDF" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="M_BookType">
     <Key>
@@ -25,6 +26,15 @@
     <Property Name="ContactNo" Type="varchar" MaxLength="20" />
     <Property Name="Address" Type="nvarchar" MaxLength="50" />
     <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="JoinDate" Type="date" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedDate" Type="date" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="char" MaxLength="10" />
+    <Property Name="Graduated" Type="bit" />
+    <Property Name="Master" Type="bit" />
+    <Property Name="Student" Type="bit" />
   </EntityType>
   <EntityType Name="M_User">
     <Key>

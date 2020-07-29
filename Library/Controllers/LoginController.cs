@@ -36,7 +36,7 @@ namespace Library.Controllers
             }
             else
             {
-                Session["UserID"] = um.UserID.ToString() + "_" + um.UserName.ToString();
+                Session["UserID"] = um.UserID.ToString();
                 return RedirectToAction("Register_List", "Register");
             }
         }

@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using CommonFunction;
 using LibraryBL;
 using LibraryModel;
+using System.IO;
+using System.Configuration;
 
 namespace Library.Controllers
 {
@@ -13,6 +15,7 @@ namespace Library.Controllers
     {
         // GET: Book
         BookBL bbl = new BookBL();
+        //string PDF = ConfigurationManager.AppSettings["PDF"].ToString();
         BookModel bm = new BookModel();
         public ActionResult Book()
         {
@@ -26,13 +29,12 @@ namespace Library.Controllers
             if (!string.IsNullOrWhiteSpace(id))
             {
                 bm.BookID = id;
-                ViewBag.MemberID = id;
+                ViewBag.BookID = id;
                 bm = bbl.Searchbook(bm);
             }
             else
             {
-
-                ViewBag.MemberID = "";
+                ViewBag.BookID = "";
             }
             return View(bm);
         }
@@ -61,10 +63,18 @@ namespace Library.Controllers
 
                 if (mid == null || mid == "")
                 {
+                    HttpPostedFileBase pdf = Request.Files["pdffile"];
+                    string pdfname = string.Empty;
+                    pdfname = pdf.FileName;
+                    bm.PDF = pdfname;
                     bbl.Book_Save(bm);
                 }
                 else
                 {
+                    HttpPostedFileBase pdf = Request.Files["pdffile"];
+                    string pdfname = string.Empty;
+                    pdfname = pdf.FileName;
+                    bm.PDF = pdfname;
                     bbl.Book_Update(bm);
                 }
                

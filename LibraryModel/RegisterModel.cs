@@ -20,5 +20,9 @@ namespace LibraryModel
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
         public string Mode { get; set; }
+        public string Gender { get; set; }
+        public bool Graduated { get; set; }
+        public bool Student { get; set; }
+        public bool Master { get; set; }
     }
 }

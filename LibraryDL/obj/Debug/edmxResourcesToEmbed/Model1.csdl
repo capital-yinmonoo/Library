@@ -13,6 +13,7 @@
     <Property Name="BookID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="BookName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="BookType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PDF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="M_BookType">
     <Key>
@@ -36,6 +37,10 @@
     <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
     <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Graduated" Type="Boolean" />
+    <Property Name="Master" Type="Boolean" />
+    <Property Name="Student" Type="Boolean" />
   </EntityType>
   <EntityType Name="M_User">
     <Key>

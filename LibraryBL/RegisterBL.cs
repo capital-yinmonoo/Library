@@ -33,14 +33,19 @@ namespace LibraryBL
             M_Member mb = new M_Member();
             mb.MemberID = rm.MemberID;
             mb.MemberName = rm.MemberName;
-            mb.MemberPassword = rm.MemberPassword;
+            string pass = rm.MemberPassword;
+            string mpass=encryptpass(pass);
+            mb.MemberPassword = mpass;
             mb.ContactNo = rm.ContactNo;
             mb.Address = rm.Address;
             mb.Photo = rm.Photo;
             mb.JoinDate = Convert.ToDateTime(rm.JoinDate);
             mb.CreatedDate = DateTime.Now;
             mb.CreatedBy = createdby;
-
+            mb.Gender = rm.Gender;
+            mb.Graduated = rm.Graduated;
+            mb.Master = rm.Master;
+            mb.Student = rm.Student;
             try
             {
                 lbe.M_Member.Add(mb);
@@ -62,13 +67,19 @@ namespace LibraryBL
             string msg = string.Empty;
             M_Member mb = lbe.M_Member.Where(c => c.MemberID.Equals(rm.MemberID)).SingleOrDefault();
             mb.MemberName = rm.MemberName;
-            mb.MemberPassword = rm.MemberPassword;
+            string pass = rm.MemberPassword;
+            string mpass = encryptpass(pass);
+            mb.MemberPassword = mpass;
             mb.ContactNo = rm.ContactNo;
             mb.Address = rm.Address;
             mb.Photo = rm.Photo;
+            mb.JoinDate = Convert.ToDateTime(rm.JoinDate);
             mb.UpdatedDate = DateTime.Now;
             mb.UpdatedBy = updatedby;
-
+            mb.Gender = rm.Gender;
+            mb.Graduated = rm.Graduated;
+            mb.Master = rm.Master;
+            mb.Student = rm.Student;
             try
             {
                 lbe.SaveChanges();
@@ -104,7 +115,14 @@ namespace LibraryBL
 
             return rml;
         }
-
+        public string encryptpass(string password)
+        {
+            string msg = "";
+            byte[] encode = new byte[password.Length];
+            encode = Encoding.UTF8.GetBytes(password);
+            msg = Convert.ToBase64String(encode);
+            return msg;
+        }
         public string Check_Member(RegisterModel rm)
         {
             LibraryEntities3 lb = new LibraryEntities3();

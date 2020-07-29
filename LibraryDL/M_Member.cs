@@ -25,5 +25,9 @@ namespace LibraryDL
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public string UpdatedBy { get; set; }
+        public string Gender { get; set; }
+        public Nullable<bool> Graduated { get; set; }
+        public Nullable<bool> Master { get; set; }
+        public Nullable<bool> Student { get; set; }
     }
 }

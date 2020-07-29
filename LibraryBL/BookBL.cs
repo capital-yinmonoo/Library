@@ -36,7 +36,7 @@ namespace LibraryBL
             mb.BookID = bm.BookID;
             mb.BookName = bm.BookName;
             mb.BookType = bm.BookType;
-           
+            mb.PDF = bm.PDF;
             try
             {
                 lbe.M_Book.Add(mb);
@@ -70,7 +70,7 @@ namespace LibraryBL
             M_Book mb = lbe.M_Book.Where(c => c.BookID.Equals(rm.BookID)).SingleOrDefault();
             mb.BookName = rm.BookName;
             mb.BookType = rm.BookType;
-           
+            mb.PDF = rm.PDF;
             try
             {
                 lbe.SaveChanges();

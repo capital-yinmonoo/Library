@@ -1,0 +1,29 @@
+﻿
+<div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="msgtitle"><i class="fa fa-info"></i></h4>
+            </div>
+            <div class="modal-body" id="msgbody">
+            <i class="fa fa-question-circle"></i>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function GetMessage(messageid,title) {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetMessage", "Message")?id=' + messageid + '',
+            dataType: 'json',
+            success: function (data) {
+                $('#msgtitle').text(title);
+                $('#msgbody').text(data.message);
+            }
+        });
+    }
+</script>

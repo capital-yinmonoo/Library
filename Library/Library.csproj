@@ -2381,6 +2381,7 @@
     <Content Include="Views\Register\Register_Entry.cshtml" />
     <Content Include="Views\Book\Book_Entry.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Shared\MessageView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

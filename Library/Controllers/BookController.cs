@@ -7,6 +7,7 @@ using CommonFunction;
 using LibraryBL;
 using LibraryModel;
 using System.IO;
+using System.Data;
 using System.Configuration;
 
 namespace Library.Controllers
@@ -14,8 +15,9 @@ namespace Library.Controllers
     public class BookController : Controller
     {
         // GET: Book
+        DataTable dt = new DataTable();
         BookBL bbl = new BookBL();
-        //string PDF = ConfigurationManager.AppSettings["PDF"].ToString();
+        string BookFile = ConfigurationManager.AppSettings["BookFile"].ToString();
         BookModel bm = new BookModel();
         public ActionResult Book()
         {
@@ -66,7 +68,22 @@ namespace Library.Controllers
                     HttpPostedFileBase pdf = Request.Files["pdffile"];
                     string pdfname = string.Empty;
                     pdfname = pdf.FileName;
-                    bm.PDF = pdfname;
+                    //bm.PDF = pdfname;
+                    if (!string.IsNullOrWhiteSpace(pdfname))
+                    {
+                        if (!Directory.Exists(BookFile))
+                        {
+                            Directory.CreateDirectory(BookFile);
+                        }
+                        string path = BookFile + bm.BookName + Path.GetExtension(pdfname);
+                        pdf.SaveAs(path);
+                        bm.PDF = bm.BookName + Path.GetExtension(pdfname);
+                       
+                    }
+                    else
+                    {
+                        bm.PDF = pdfname;
+                    }
                     bbl.Book_Save(bm);
                 }
                 else
@@ -74,7 +91,23 @@ namespace Library.Controllers
                     HttpPostedFileBase pdf = Request.Files["pdffile"];
                     string pdfname = string.Empty;
                     pdfname = pdf.FileName;
-                    bm.PDF = pdfname;
+                    //bm.PDF = pdfname;
+                    if (!string.IsNullOrWhiteSpace(pdfname))
+                    {
+                        if (!Directory.Exists(BookFile))
+                        {
+                            Directory.CreateDirectory(BookFile);
+                        }
+                        string path = BookFile + bm.BookName + Path.GetExtension(pdfname);
+                        pdf.SaveAs(path);
+                        bm.PDF = bm.BookName + Path.GetExtension(pdfname);
+                       
+                    }
+                    else
+                    {
+                        DataTable dt = bbl.BookCheck(mid);
+                        bm.PDF = dt.Rows[0]["PDF"].ToString();
+                    }
                     bbl.Book_Update(bm);
                 }
                

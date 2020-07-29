@@ -68,7 +68,8 @@ namespace LibraryBL
             M_Member mb = lbe.M_Member.Where(c => c.MemberID.Equals(rm.MemberID)).SingleOrDefault();
             mb.MemberName = rm.MemberName;
             string pass = rm.MemberPassword;
-            string mpass = encryptpass(pass);
+            string dpass = Decryptdata(pass);
+            string mpass = encryptpass(dpass);
             mb.MemberPassword = mpass;
             mb.ContactNo = rm.ContactNo;
             mb.Address = rm.Address;
@@ -107,8 +108,8 @@ namespace LibraryBL
                     rml.Photo = "Default.png";
                rml.MemberID = dt.Rows[0]["MemberID"].ToString();
                rml.MemberName = dt.Rows[0]["MemberName"].ToString();
-               rml.MemberPassword = dt.Rows[0]["MemberPassword"].ToString();
-               rml.ContactNo = dt.Rows[0]["ContactNo"].ToString();
+                rml.MemberPassword = dt.Rows[0]["MemberPassword"].ToString();
+                rml.ContactNo = dt.Rows[0]["ContactNo"].ToString();
                rml.Address = dt.Rows[0]["Address"].ToString();
                
             }
@@ -122,6 +123,18 @@ namespace LibraryBL
             encode = Encoding.UTF8.GetBytes(password);
             msg = Convert.ToBase64String(encode);
             return msg;
+        }
+        public string Decryptdata(string encryptpwd)
+        {
+            string decryptpwd = string.Empty;
+            UTF8Encoding encodepwd = new UTF8Encoding();
+            Decoder Decode = encodepwd.GetDecoder();
+            byte[] todecode_byte = Convert.FromBase64String(encryptpwd);
+            int charCount = Decode.GetCharCount(todecode_byte, 0, todecode_byte.Length);
+            char[] decoded_char = new char[charCount];
+            Decode.GetChars(todecode_byte, 0, todecode_byte.Length, decoded_char, 0);
+            decryptpwd = new String(decoded_char);
+            return decryptpwd;
         }
         public string Check_Member(RegisterModel rm)
         {

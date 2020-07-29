@@ -99,5 +99,15 @@ namespace LibraryBL
 
             return bm;
         }
+        public DataTable BookCheck(string id)
+        {
+            BaseDL bdl = new BaseDL();
+            DataTable dt = new DataTable();
+            SqlParameter[] prms = new SqlParameter[1];
+            prms[0] = new SqlParameter("@BookID", SqlDbType.VarChar) { Value = id };
+            dt = bdl.SelectData("M_Book_Select_byID", prms);
+
+            return dt;
+        }
     }
 }

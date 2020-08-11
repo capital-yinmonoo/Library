@@ -1,4 +1,4 @@
-﻿
+﻿@model LibraryModel.BookModel
 @{
     ViewBag.Title = "Book";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,7 +19,9 @@
                                 <tr>
                                     <th>BookID:</th>
                                     <th>BookName:</th>
+                                    <th></th>
                                 </tr>
+                                @*<tr><td><a href="#" title="delete" class="delete" onclick="return confirm('Are you sure you want to delete this item')">Delete</a></td></tr>*@
                             </thead>
                             <tfoot>
                             </tfoot>
@@ -31,9 +33,27 @@
     </div>
 
 </div>
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title1" style="color:red;"> 削除してよろしいですか。</h4>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="color:white;background-color:red;">いいえ</button>
+                <button type="button" class="btn btn-default" onclick="deleteConfirm()" data-dismiss="modal" style="color:white;background-color:red">はい</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 @section scripts {
-    <script type="text/javascript">
+<script type="text/javascript">
         $(document).ready(function () {
 
 
@@ -57,12 +77,21 @@
                                 return '<a href="../Book/Book_Entry/' + row.BookID + '">' + row.BookID + '</a>';
                             },
                         },
-                        { "data": "BookName", orderable: false, "width": "13%" }
+                        { "data": "BookName", orderable: false, "width": "13%" },
+
+                        {
+                            "data": "", "render": function (data, type, row) {
+                                //return '<button type="button"  class="btn btn-outline-danger"  data-toggle="modal" data-target="#myModal1"><a href="../Book/M_DeleteBook/' + row.BookID + ' " >Delete</a></button>';
+                                //<a href="../Book/M_DeleteBook/" onclick="return confirm('Are you sure you want to Delete?');">Delete</a>
+                                return '<button type="button" clsss="btn btn-outline-danger" onclick="return confirm("Are you sure you want to delete this item ?");"> <a href="../Book/M_DeleteBook/' + row.BookID + '" >Delete</a></button>'
+                            }
+                        }
                     ],
                 }
             );
         });
-
-    </script>
+   
+</script>
 
 }
+

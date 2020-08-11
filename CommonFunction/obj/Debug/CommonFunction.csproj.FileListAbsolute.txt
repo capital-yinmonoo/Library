@@ -34,3 +34,8 @@ C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CoreCompileInp
 C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.csproj.CopyComplete
 C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.dll
 C:\Library\Library\CommonFunction\obj\Debug\CommonFunction.pdb
+C:\Library\Library\CommonFunction\bin\Debug\LibraryDL.dll
+C:\Library\Library\CommonFunction\bin\Debug\EntityFramework.dll
+C:\Library\Library\CommonFunction\bin\Debug\LibraryDL.pdb
+C:\Library\Library\CommonFunction\bin\Debug\LibraryDL.dll.config
+C:\Library\Library\CommonFunction\bin\Debug\EntityFramework.xml

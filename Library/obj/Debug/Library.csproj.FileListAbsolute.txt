@@ -350,3 +350,9 @@ C:\Library\Library\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
 C:\Library\Library\Library\obj\Debug\Library.csproj.CopyComplete
 C:\Library\Library\Library\obj\Debug\Library.dll
 C:\Library\Library\Library\obj\Debug\Library.pdb
+C:\Library\Library\Library\bin\System.Net.Http.Formatting.dll
+C:\Library\Library\Library\bin\System.Web.Http.dll
+C:\Library\Library\Library\bin\System.Web.Http.WebHost.dll
+C:\Library\Library\Library\bin\System.Net.Http.Formatting.xml
+C:\Library\Library\Library\bin\System.Web.Http.xml
+C:\Library\Library\Library\bin\System.Web.Http.WebHost.xml

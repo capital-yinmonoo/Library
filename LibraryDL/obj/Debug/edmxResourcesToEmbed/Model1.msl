@@ -49,5 +49,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="M_Message">
+      <EntityTypeMapping TypeName="LibraryModel.M_Message">
+        <MappingFragment StoreEntitySet="M_Message">
+          <ScalarProperty Name="Message2" ColumnName="Message2" />
+          <ScalarProperty Name="Message1" ColumnName="Message1" />
+          <ScalarProperty Name="KEY" ColumnName="KEY" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

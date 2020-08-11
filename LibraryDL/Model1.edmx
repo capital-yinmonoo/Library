@@ -41,6 +41,17 @@
           <Property Name="Master" Type="bit" />
           <Property Name="Student" Type="bit" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Library.dbo.M_Message' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M_Message">
+          <Key>
+            <PropertyRef Name="KEY" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" />
+          <Property Name="KEY" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Message1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="M_User">
           <Key>
             <PropertyRef Name="UserID" />
@@ -54,6 +65,14 @@
           <EntitySet Name="M_BookType" EntityType="Self.M_BookType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="M_Member" EntityType="Self.M_Member" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="M_User" EntityType="Self.M_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M_Message" EntityType="Self.M_Message" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M_Message].[ID] AS [ID], 
+    [M_Message].[KEY] AS [KEY], 
+    [M_Message].[Message1] AS [Message1], 
+    [M_Message].[Message2] AS [Message2]
+    FROM [dbo].[M_Message] AS [M_Message]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -64,6 +83,7 @@
           <EntitySet Name="M_BookType" EntityType="LibraryModel.M_BookType" />
           <EntitySet Name="M_Member" EntityType="LibraryModel.M_Member" />
           <EntitySet Name="M_User" EntityType="LibraryModel.M_User" />
+          <EntitySet Name="M_Message" EntityType="LibraryModel.M_Message" />
         </EntityContainer>
         <EntityType Name="M_Book">
           <Key>
@@ -108,6 +128,15 @@
           <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M_Message">
+          <Key>
+            <PropertyRef Name="KEY" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KEY" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Message1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -160,6 +189,16 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Message">
+            <EntityTypeMapping TypeName="LibraryModel.M_Message">
+              <MappingFragment StoreEntitySet="M_Message">
+                <ScalarProperty Name="Message2" ColumnName="Message2" />
+                <ScalarProperty Name="Message1" ColumnName="Message1" />
+                <ScalarProperty Name="KEY" ColumnName="KEY" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

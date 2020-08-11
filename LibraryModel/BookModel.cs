@@ -13,5 +13,6 @@ namespace LibraryModel
         public string BookType { get; set; }
         public string BookTypeID { get; set; }
         public string PDF { get; set; }
+       
     }
 }

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using LibraryDL;
 using LibraryModel;
-
+using System.Configuration;
 
 namespace LibraryBL
 {
@@ -25,6 +25,15 @@ namespace LibraryBL
             BaseDL bdl = new BaseDL();
             SqlParameter[] prms = new SqlParameter[0];
             return bdl.SelectData("M_BookType_SelectAll", prms);
+        }
+
+        public BookModel BookDelete(BookModel bm)
+        {
+            BaseDL bdl = new BaseDL();
+            SqlParameter[] prms = new SqlParameter[1];
+            prms[0] = new SqlParameter("@BookID", SqlDbType.Int) { Value = bm.BookID };
+            DataTable dt = bdl.SelectData("M_Delete_Book", prms);
+            return bm;
         }
 
         public string Book_Save(BookModel bm)

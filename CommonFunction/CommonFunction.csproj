@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryDL\LibraryDL.csproj">
+      <Project>{1ac2b92a-7c85-4cfa-81ec-598bd6796332}</Project>
+      <Name>LibraryDL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

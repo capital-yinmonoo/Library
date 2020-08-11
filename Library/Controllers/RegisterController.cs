@@ -43,6 +43,12 @@ namespace Library.Controllers
 
         public ActionResult Register_List()
         {
+            String Imsg = Session["Imsg"] as string;
+            String Umsg = Session["Umsg"] as string;
+            ViewBag.Imsg = Imsg;
+            ViewBag.Umsg = Umsg;
+            Session["Imsg"] = "";
+            Session["Umsg"] = "";
             return View();
         }
 
@@ -56,11 +62,10 @@ namespace Library.Controllers
         public ActionResult Member_Save(RegisterModel rm)
         {
             RegisterBL rbl = new RegisterBL();
-           
+            string msg = string.Empty;
             if (rm != null)
             {
                 var mid = rbl.Check_Member(rm);
-
                
                 if (mid == null || mid == "")
                 {
@@ -81,7 +86,11 @@ namespace Library.Controllers
                     {
                         rm.Photo = "Default.png";
                     }
-                    rbl.Member_Save(rm);
+                    msg=rbl.Member_Save(rm);
+                    if (msg == "Insert Success")
+                    {
+                        Session["Imsg"] = "Insert";
+                    }
                 }
                 else
                 {
@@ -105,7 +114,11 @@ namespace Library.Controllers
                         rm.Photo = dt.Rows[0]["Photo"].ToString();
                     }
                     
-                    rbl.Member_Update(rm);
+                    msg=rbl.Member_Update(rm);
+                    if (msg == "OK")
+                    {
+                        Session["Umsg"] = "Update";
+                    }
                 }
             }
             return RedirectToAction("Register_List");

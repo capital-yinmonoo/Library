@@ -88,14 +88,19 @@
         <div class="col-xl-6 ">
             <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
 
-                <button type="submit" id="btnupdate" class="btn btn-warning col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-save"></i>&nbsp; Update</button>
+                <button type="submit" id="btnupdate" class="btn btn-warning col-xl-2" tabindex="50" style="width:40%;font:30;"><i class="fa fa-save"></i>&nbsp; Update</button>
 
             </div>
         </div>
+        @*<div class="col-xl-6 ">
+            <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
+                <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete record');" />
+                <button type="submit" id="btndelete" class="btn btn-warning col-xl-2" onclick="return confirm('Are you sure you want to delete record');" );" tabindex="50" style="width:40%;font:30;"><i class="fa fa-cross"></i>&nbsp; Delete</button>
+            </div>
+        </div>*@
         <div class="col-xl-6 ">
             <div class="text-s font-weight-bold text-custom1 text-uppercase mb-1">
-
-                <button type="button" id="btncancel" class="btn btn-dark col-xl-2" tabindex="38" style="width:20%;"><i class="fa fa-cross"></i>&nbsp; Cancel</button>
+                <button type="button" id="btncancel" class="btn btn-dark col-xl-2" tabindex="50" style="width:40%;font:30;"><i class="fa fa-cross"></i>&nbsp; Cancel</button>
             </div>
         </div>
     </div>
@@ -109,12 +114,14 @@
             if (id == '' || id == null) {
                 $("#btnupdate").css("display", "none");
                 $("#btncancel").css("display", "none");
+                //$("#btndelete").css("display", "none");
             }
             else {
              
                 $('#txtBookID').attr('readonly', true);
                 $("#btnSave").css("display", "none");
                 $("#btnupdate").css("display", "block");
+                //$("#btndelete").css("display", "block");
                 $("#btncancel").css("display", "block");
             }
            SelectBook();

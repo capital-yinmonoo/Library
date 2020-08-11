@@ -55,6 +55,13 @@ namespace Library.Controllers
             Function fun = new Function();
             return fun.DataTableToJSONWithJSONNet(bbl.GetBookType());
         }
+        
+        public ActionResult M_DeleteBook(string id)
+        {
+            bm.BookID = id;
+            bbl.BookDelete(bm);
+            return RedirectToAction("Book");
+        }
         public ActionResult M_BookSave(BookModel bm)
         {
             //bbl.Book_Save(bm);
@@ -109,6 +116,7 @@ namespace Library.Controllers
                         bm.PDF = dt.Rows[0]["PDF"].ToString();
                     }
                     bbl.Book_Update(bm);
+                    //bbl.BookDelete(bm);
                 }
                
             }

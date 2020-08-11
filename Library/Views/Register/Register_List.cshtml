@@ -1,83 +1,97 @@
 ﻿
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "Register_List";
-                Layout = "~/Views/Shared/_Layout.cshtml";
+    /**/
+
+    ViewBag.Title = "Register_List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Html.RenderPartial("~/Views/Shared/MessageView.cshtml");
 }
 
 
 @using (Html.BeginForm("Member_Save", "Register", FormMethod.Post, new { enctype = "multipart/form-data", @id = "MyForm" }))
 {
-<section class="content">
-    <div class="container-fluid" id="content_zip">
+    <section class="content">
+        <div class="container-fluid" id="content_zip">
 
-        <div class="row">
-            <div class="col-xl-12 col-md-12 mb-2">
-                <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="tbmember" class="hrtable col-sm-12 col-md-12">
-                                <thead>
-                                    <tr>
-                                        <th>MemberID:</th>
-                                        <th>MemberName:</th>
-                                        <th>MemberPassword:</th>
-                                        <th>ContactNo:</th>
-                                        <th>Address:</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                </tfoot>
-                            </table>
+            <div class="row">
+                <div class="col-xl-12 col-md-12 mb-2">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="tbmember" class="hrtable col-sm-12 col-md-12">
+                                    <thead>
+                                        <tr>
+                                            <th>MemberID:</th>
+                                            <th>MemberName:</th>
+                                            <th>MemberPassword:</th>
+                                            <th>ContactNo:</th>
+                                            <th>Address:</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-
-    </div>
-</section>
-        }
+    </section>
+}
 
 
-        @section Scripts{
-            <script type="text/javascript">
-                $(document).ready(function () {
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-                    var table = $('#tbmember').DataTable(
+            var Imsg = '@ViewBag.Imsg';
+            if (Imsg == "Insert") {
+                GetMessage("I_1001", "Insert");
+                $('#myModal').modal('show');
+            }
+              var Umsg = '@ViewBag.Umsg';
+            if (Umsg == "Update") {
+                GetMessage("I_1002", "Update");
+                $('#myModal').modal('show');
+            }
+
+            var table = $('#tbmember').DataTable(
+                {
+                    "language": {
+                        "info": "Display _START_ to _END_ of _TOTAL_ records",
+                    },
+                    "oLanguage": {
+                        "sLengthMenu": "Display _MENU_ records",
+                    },
+                    "ajax": {
+                        "url": "../Register/GetMemberList",
+                        "type": "GET",
+                        "datatype": "json",
+                        "dataSrc": ""
+                    },
+                    "columns": [
                         {
-                            "language": {
-                                "info": "Display _START_ to _END_ of _TOTAL_ records",
+                            "data": "MemberID", "render": function (data, type, row) {
+                                return '<a href="../Register/Register_Entry/' + row.MemberID + '">' + row.MemberID + '</a>';
                             },
-                            "oLanguage": {
-                                "sLengthMenu": "Display _MENU_ records",
-                            },
-                            "ajax": {
-                                "url": "../Register/GetMemberList",
-                                "type": "GET",
-                                "datatype": "json",
-                                "dataSrc": ""
-                            },
-                            "columns": [
-                                {
-                                    "data": "MemberID", "render": function (data, type, row) {
-                                        return '<a href="../Register/Register_Entry/' + row.MemberID + '">' + row.MemberID + '</a>';
-                                    },
-                                },
-                                //{ "data": "MemberID", orderable: false, "width": "13%" },
-                                { "data": "MemberName", orderable: false, "width": "13%" },
-                                { "data": "MemberPassword", orderable: false, "width": "13%" },
-                                { "data": "ContactNo", orderable: false, "width": "13%" },
-                                { "data": "Address", orderable: false, "width": "13%" }
-                            ],
-                        }
-                    );
-                });
+                        },
+                        //{ "data": "MemberID", orderable: false, "width": "13%" },
+                        { "data": "MemberName", orderable: false, "width": "13%" },
+                        { "data": "MemberPassword", orderable: false, "width": "13%" },
+                        { "data": "ContactNo", orderable: false, "width": "13%" },
+                        { "data": "Address", orderable: false, "width": "13%" }
+                    ],
+                }
+            );
+        });
 
-            </script>
+    </script>
 
-        }
+}
 
 
 

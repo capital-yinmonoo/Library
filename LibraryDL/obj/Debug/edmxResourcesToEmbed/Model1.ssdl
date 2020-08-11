@@ -36,6 +36,17 @@
     <Property Name="Master" Type="bit" />
     <Property Name="Student" Type="bit" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Library.dbo.M_Message' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="M_Message">
+    <Key>
+      <PropertyRef Name="KEY" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="10" />
+    <Property Name="KEY" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Message2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="M_User">
     <Key>
       <PropertyRef Name="UserID" />
@@ -49,5 +60,13 @@
     <EntitySet Name="M_BookType" EntityType="Self.M_BookType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="M_Member" EntityType="Self.M_Member" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="M_User" EntityType="Self.M_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="M_Message" EntityType="Self.M_Message" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [M_Message].[ID] AS [ID], 
+    [M_Message].[KEY] AS [KEY], 
+    [M_Message].[Message1] AS [Message1], 
+    [M_Message].[Message2] AS [Message2]
+    FROM [dbo].[M_Message] AS [M_Message]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

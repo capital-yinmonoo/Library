@@ -9,6 +9,7 @@ using LibraryModel;
 using System.IO;
 using System.Data;
 using System.Configuration;
+using Newtonsoft.Json;
 
 namespace Library.Controllers
 {
@@ -41,6 +42,12 @@ namespace Library.Controllers
             return View(bm);
         }
 
+        public ActionResult Book_Download()
+        {
+           
+            return View();
+        }
+
 
         [HttpGet]
         public string GetBookList()
@@ -55,12 +62,23 @@ namespace Library.Controllers
             Function fun = new Function();
             return fun.DataTableToJSONWithJSONNet(bbl.GetBookType());
         }
-        
-        public ActionResult M_DeleteBook(string id)
+
+      
+        [HttpPost]
+        public string M_DeleteBook(string id)
         {
-            bm.BookID = id;
-            bbl.BookDelete(bm);
-            return RedirectToAction("Book");
+            var message = string.Empty;
+            if (id == null)
+            {
+                message = "NOK";
+            }
+            else
+            {
+                bm.BookID = id;
+                bbl.BookDelete(bm);
+                message = "OK";
+            }
+            return JsonConvert.SerializeObject(message);
         }
         public ActionResult M_BookSave(BookModel bm)
         {

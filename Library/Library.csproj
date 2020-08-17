@@ -137,11 +137,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CheckUser\CheckUserAccess.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2392,6 +2394,8 @@
     <Content Include="Views\Book\Book_Entry.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\MessageView.cshtml" />
+    <Content Include="Views\User\User_list.cshtml" />
+    <Content Include="Views\User\User_Entry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2419,6 +2423,10 @@
     <ProjectReference Include="..\LibraryBL\LibraryBL.csproj">
       <Project>{00696871-7f3c-456d-a299-f7ae52d82966}</Project>
       <Name>LibraryBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryDL\LibraryDL.csproj">
+      <Project>{1AC2B92A-7C85-4CFA-81EC-598BD6796332}</Project>
+      <Name>LibraryDL</Name>
     </ProjectReference>
     <ProjectReference Include="..\LibraryModel\LibraryModel.csproj">
       <Project>{f78ca0c2-f420-4b89-968a-ac48177fdb7f}</Project>

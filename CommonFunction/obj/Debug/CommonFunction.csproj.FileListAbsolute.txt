@@ -39,3 +39,8 @@ C:\Library\Library\CommonFunction\bin\Debug\EntityFramework.dll
 C:\Library\Library\CommonFunction\bin\Debug\LibraryDL.pdb
 C:\Library\Library\CommonFunction\bin\Debug\LibraryDL.dll.config
 C:\Library\Library\CommonFunction\bin\Debug\EntityFramework.xml
+C:\My Data\Projects\Library\Library\Library\CommonFunction\bin\Debug\LibraryDL.dll
+C:\My Data\Projects\Library\Library\Library\CommonFunction\bin\Debug\EntityFramework.dll
+C:\My Data\Projects\Library\Library\Library\CommonFunction\bin\Debug\LibraryDL.pdb
+C:\My Data\Projects\Library\Library\Library\CommonFunction\bin\Debug\LibraryDL.dll.config
+C:\My Data\Projects\Library\Library\Library\CommonFunction\bin\Debug\EntityFramework.xml

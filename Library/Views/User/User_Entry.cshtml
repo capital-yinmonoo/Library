@@ -140,22 +140,25 @@
             $.ajax({
                 type: 'POST',
                 url: '@Url.Action("_MViewBind", "User")',
-                datatype: 'json',
-                success: function (json) {
-                    FillMenu(json);
+                dataType: "JSON",
+                success: function (JSON) {
+                    FillMenu(JSON);
+                 
+                  
                 }
             });
         }
 
+       
         function FillMenu(json) {
             $(".dynamicAtt").remove();
             var maindiv = $(".dynamcdiv");
             var newdiv = document.createElement('div');
             newdiv.className = 'form-row dynamicAtt';
             $(maindiv).append(newdiv);
-            alert(json);
+          
             var x;
-            //if (json[0].Total > 0)
+          
             if (json[0].Total > 0) {
 
                 var wrapper = $(".dynamicAtt");
@@ -172,7 +175,7 @@
                     '</tbody>' +
                     '</table>');
 
-                for (x = 1; x <= jsonjson[0].Total; x++) {
+                for (x = 1; x <= json[0].Total; x++) {
 
                     var ViewID = '<input type="text" style="border-style: hidden;" maxlength="4" size="4" readonly id="UserlistModel_' + (x - 1) + '__ViewID" name="UserlistModel[' + (x - 1) + '].ViewID">';
 
@@ -199,7 +202,7 @@
                     }
 
                     if (x % 2 == 0) {
-                        $('#UserlistModel_' + (x - 1) + '__ViewID').css('background-color', 'azure');
+                        $('#UserlistModel_' + (x - 1) + '__ViewID').css('background-color', '#adb5bd');
                     }
                     else {
                         $('#UserlistModel_' + (x - 1) + '__ViewID').css('background-color', 'white');

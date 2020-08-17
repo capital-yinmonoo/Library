@@ -356,3 +356,10 @@ C:\Library\Library\Library\bin\System.Web.Http.WebHost.dll
 C:\Library\Library\Library\bin\System.Net.Http.Formatting.xml
 C:\Library\Library\Library\bin\System.Web.Http.xml
 C:\Library\Library\Library\bin\System.Web.Http.WebHost.xml
+C:\My Data\Projects\Library\Library\Library\Library\bin\System.Net.Http.Formatting.dll
+C:\My Data\Projects\Library\Library\Library\Library\bin\System.Web.Http.dll
+C:\My Data\Projects\Library\Library\Library\Library\bin\System.Web.Http.WebHost.dll
+C:\My Data\Projects\Library\Library\Library\Library\bin\System.Net.Http.Formatting.xml
+C:\My Data\Projects\Library\Library\Library\Library\bin\System.Web.Http.xml
+C:\My Data\Projects\Library\Library\Library\Library\bin\System.Web.Http.WebHost.xml
+C:\My Data\Projects\Library\Library\Library\Library\bin\FastMember.dll

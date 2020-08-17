@@ -1,4 +1,68 @@
-﻿<!DOCTYPE html>
+﻿@using Library.CheckUser;
+<!DOCTYPE html>
+@{ 
+    var ControllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var ViewPageName = ViewContext.RouteData.Values["action"].ToString();
+    var time = Session.Timeout;
+    string loginID = string.Empty;
+    if (ViewPageName != "Error")
+    {
+        if (Session["UserID"] != null)
+        {
+            loginID = Session["UserID"].ToString().Split('_')[0];
+            //UserName = Session["UserID"].ToString().Split('_')[1];
+
+            //Photo = Session["Photo"].ToString();
+        }
+        else
+        {
+            Context.Response.Redirect("~/Login/Login");
+        }
+    }
+    else
+    {
+        Context.Response.Redirect("~/Login/Login");
+    }
+    string ShowView1 = string.Empty;
+    string ShowView2 = string.Empty;
+    string ShowView3 = string.Empty;
+    string ShowView4 = string.Empty;
+    string ShowView5 = string.Empty;
+    string ShowView6 = string.Empty;
+    if (Session["UserID"] != null)
+    {
+        bool UserEntryflag = CheckUserAccess.UserAccess("User_Entry");
+        if (UserEntryflag == true)
+        {
+            ShowView1 = "1";
+        }
+        bool UserListflag = CheckUserAccess.UserAccess("User_list");
+        if (UserListflag == true)
+        {
+            ShowView2 = "2";
+        }
+        bool RegisterEntryflag = CheckUserAccess.UserAccess("Register_Entry");
+        if (RegisterEntryflag == true)
+        {
+            ShowView3 = "3";
+        }
+        bool RegisterListflag = CheckUserAccess.UserAccess("Register_List");
+        if (RegisterListflag == true)
+        {
+            ShowView4 = "4";
+        }
+        bool BookEntryflag = CheckUserAccess.UserAccess("Book_Entry");
+        if (BookEntryflag == true)
+        {
+            ShowView5 = "5";
+        }
+        bool BookListflag = CheckUserAccess.UserAccess("Book");
+        if (BookListflag == true)
+        {
+            ShowView6 = "6";
+        }
+    }
+}
 <html>
 <head>
     <meta charset="utf-8" />
@@ -96,88 +160,117 @@
                             </a>
                         </li>
 
-                        <li class="nav-header">Administration</li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-user"></i>
-                                <p>
-                                    Admin
-                                    <i class="fas fa-angle-left right"></i>
-                                    <span class="badge badge-info right">2</span>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a  class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>User Entry</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a  class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>User List</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                        @if (ShowView1 == "1" || ShowView2 == "2")
+                        {
+                            <li class="nav-header">Administration</li>
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa fa-user"></i>
+                                    <p>
+                                        Admin
+                                        <i class="fas fa-angle-left right"></i>
+                                        <span class="badge badge-info right">2</span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @if (ShowView1 == "1")
+                                    {
 
-                        <li class="nav-header">MemberList</li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-registered"></i>
-                                <p>
-                                    Registration
-                                    <i class="fas fa-angle-left right"></i>
-                                    <span class="badge badge-info right">2</span>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href='@Url.Action("Register_Entry", "Register")' class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Register Entry</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href='@Url.Action("Register_List", "Register")' class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Registration List</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                                        <li class="nav-item">
 
-                        <li class="nav-header">Book Options</li>
+                                            <a href='@Url.Action("User_Entry", "User")' class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>User Entry</p>
+                                            </a>
+                                        </li>
+                                    }
+                                    @if (ShowView2 == "2")
+                                    {
+                                        <li class="nav-item">
+                                            <a href='@Url.Action("User_List", "User")' class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>User List</p>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
 
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-book"></i>
-                                <p>
-                                    Book
-                                    <i class="fas fa-angle-left right"></i>
-                                    <span class="badge badge-info right">2</span>
+                        @if (ShowView3 == "3" || ShowView4 == "4")
+                        {
+                            <li class="nav-header">MemberList</li>
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa fa-registered"></i>
+                                    <p>
+                                        Registration
+                                        <i class="fas fa-angle-left right"></i>
+                                        <span class="badge badge-info right">2</span>
+                                    </p>
+                                </a>
 
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href='@Url.Action("Book", "Book")' class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Book List</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href='@Url.Action("Book_Entry", "Book")' class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Book Entry</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                                <ul class="nav nav-treeview">
+                                    @if (ShowView3 == "3")
+                                    {
+                                        <li class="nav-item">
+                                            <a href='@Url.Action("Register_Entry", "Register")' class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register Entry</p>
+                                            </a>
+                                        </li>
+                                    }
+                                    @if (ShowView4 == "4")
+                                    {
+                                        <li class="nav-item">
+                                            <a href='@Url.Action("Register_List", "Register")' class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Registration List</p>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+
+                        @if (ShowView5 == "5" || ShowView6 == "6")
+                        {
+                            <li class="nav-header">Book Options</li>
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa fa-book"></i>
+                                    <p>
+                                        Book
+                                        <i class="fas fa-angle-left right"></i>
+                                        <span class="badge badge-info right">2</span>
+
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @if (ShowView5 == "5")
+                                    {
+                                        <li class="nav-item">
+                                            <a href='@Url.Action("Book", "Book")' class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Book List</p>
+                                            </a>
+                                        </li>
+                                    }
+                                    @if (ShowView6 == "6")
+                                    {
+                                        <li class="nav-item">
+                                            <a href='@Url.Action("Book_Entry", "Book")' class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Book Entry</p>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
 
                     </ul>
-                </nav>
+</nav>
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
@@ -203,7 +296,7 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header"><h4>Logout <i class="fa fa-lock"></i></h4></div>
-                <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+                <div class="modal-body"> Are you sure want to log-off?</div>
                 <div class="modal-footer"><a href='@Url.Action("Login", "Login")' class="btn btn-primary btn-block">Logout</a></div>
             </div>
         </div>

@@ -35,7 +35,12 @@ namespace LibraryBL
             DataTable dt = bdl.SelectData("M_Delete_Book", prms);
             return bm;
         }
-
+        //public DataTable BookDelete()
+        //{
+        //    BaseDL bdl = new BaseDL();
+        //    SqlParameter[] prms = new SqlParameter[0];
+        //    return bdl.SelectData("M_Delete_Book", prms);
+        //}
         public string Book_Save(BookModel bm)
         {
 
